@@ -17,7 +17,7 @@ var navigationservice = angular.module('navigationservice', [])
     subnav: [{
       name: "Subnav1",
       classis: "active",
-      link: "#/home"
+      anchor: "home"
     }]
   }];
 
