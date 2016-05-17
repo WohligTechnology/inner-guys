@@ -50,5 +50,13 @@ a, .btn {
   @include box-shadow(none);
 }
 //bootstrap forms
+
+.flexslider {
+  margin: 0;
+  border: 0px solid #ffffff;
+}
+.flex-direction-nav {
+  display: none;
+}
 /* Start writing sass here */
 @import "fancybox-override";

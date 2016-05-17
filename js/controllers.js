@@ -14,17 +14,17 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         pagelink: 'about-us',
         pagename: 'About Us'
     }, {
-        image: 'img/slides/slide2.jpg',
-        title: '',
-        text: '',
-        pagelink: '',
-        pagename: ''
+        image: 'img/slides/slide1.jpg',
+        title: 'Brigding',
+        text: 'lorem',
+        pagelink: 'about-us',
+        pagename: 'About Us'
     }, {
-        image: 'img/slides/slide3.jpg',
-        title: '',
-        text: '',
-        pagelink: '',
-        pagename: ''
+        image: 'img/slides/slide1.jpg',
+        title: 'Brigding',
+        text: 'lorem',
+        pagelink: 'about-us',
+        pagename: 'About Us'
     }];
 
 })
