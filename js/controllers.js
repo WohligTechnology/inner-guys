@@ -9,6 +9,75 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   $scope.menutitle = NavigationService.makeactive("Home");
   TemplateService.title = $scope.menutitle;
   $scope.navigation = NavigationService.getnav();
+})
+
+  .controller('AboutCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    //Used to name the .html file
+
+    console.log("Testing Consoles");
+
+    $scope.template = TemplateService.changecontent("about-us");
+    $scope.menutitle = NavigationService.makeactive("ABOUT US");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getnav();
+  })
+
+    .controller('ServicesCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+      //Used to name the .html file
+
+      console.log("Testing Consoles");
+
+      $scope.template = TemplateService.changecontent("services");
+      $scope.menutitle = NavigationService.makeactive("SERVICES");
+      TemplateService.title = $scope.menutitle;
+      $scope.navigation = NavigationService.getnav();
+    })
+
+      .controller('AffiliatesCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+        //Used to name the .html file
+
+        console.log("Testing Consoles");
+
+        $scope.template = TemplateService.changecontent("affiliates");
+        $scope.menutitle = NavigationService.makeactive("AFFILIATES");
+        TemplateService.title = $scope.menutitle;
+        $scope.navigation = NavigationService.getnav();
+      })
+
+        .controller('ClientsCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+          //Used to name the .html file
+
+          console.log("Testing Consoles");
+
+          $scope.template = TemplateService.changecontent("clients");
+          $scope.menutitle = NavigationService.makeactive("CLIENTS");
+          TemplateService.title = $scope.menutitle;
+          $scope.navigation = NavigationService.getnav();
+        })
+
+        .controller('DownloadsCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+          //Used to name the .html file
+
+          console.log("Testing Consoles");
+
+          $scope.template = TemplateService.changecontent("downloads");
+          $scope.menutitle = NavigationService.makeactive("DOWNLOADS");
+          TemplateService.title = $scope.menutitle;
+          $scope.navigation = NavigationService.getnav();
+        })
+
+        .controller('ContactCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+          //Used to name the .html file
+
+          console.log("Testing Consoles");
+
+          $scope.template = TemplateService.changecontent("contact-us");
+          $scope.menutitle = NavigationService.makeactive("CONTACT US");
+          TemplateService.title = $scope.menutitle;
+          $scope.navigation = NavigationService.getnav();
+        })
+
+
 
   $scope.mySlides = [
     'http://flexslider.woothemes.com/images/kitchen_adventurer_cheesecake_brownie.jpg',

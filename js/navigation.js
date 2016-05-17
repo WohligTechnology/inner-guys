@@ -21,6 +21,43 @@ var navigationservice = angular.module('navigationservice', [])
     }]
   }];
 
+  {
+  name: "ABOUT US",
+  classis: "active",
+  anchor: "about-us",
+  subnav: []
+},{
+  name: "SERVICES",
+  classis: "active",
+  anchor: "services",
+  subnav: []
+},{
+  name: "AFFILIATES",
+  classis: "active",
+  anchor: "affiliates",
+  subnav: []
+},{
+  name: "CAREERS",
+  classis: "active",
+  anchor: "careers",
+  subnav: []
+},{
+  name: "CLIENTS",
+  classis: "active",
+  anchor: "clients",
+  subnav: []
+},{
+  name: "DOWNLOADS",
+  classis: "active",
+  anchor: "downloads",
+  subnav: []
+},{
+  name: "CONTACT US",
+  classis: "active",
+  anchor: "contact-us",
+  subnav: []
+},
+
   return {
     getnav: function() {
       return navigation;

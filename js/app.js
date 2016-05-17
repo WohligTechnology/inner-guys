@@ -18,52 +18,47 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
   })
 
   .state('about-us', {
-  url: "/",
+  url: "/about-us",
   templateUrl: "views/template.html",
   controller: 'AboutCtrl'
 })
 
 .state('services', {
-url: "/",
+url: "/services",
 templateUrl: "views/template.html",
 controller: 'ServicesCtrl'
 })
 
 .state('affiliates', {
-url: "/",
+url: "/affiliates",
 templateUrl: "views/template.html",
 controller: 'AffiliatesCtrl'
 })
 
 .state('careers', {
-url: "/",
+url: "/careers",
 templateUrl: "views/template.html",
 controller: 'CareersCtrl'
 })
 
 .state('clients', {
-url: "/",
+url: "/clients",
 templateUrl: "views/template.html",
 controller: 'ClientsCtrl'
 })
 
 
 .state('downloads', {
-url: "/",
+url: "/downloads",
 templateUrl: "views/template.html",
 controller: 'DownloadsCtrl'
 })
 
 .state('contact-us', {
-url: "/",
+url: "/contact-us",
 templateUrl: "views/template.html",
 controller: 'ContactCtrl'
 });
-
-
-
-
-
 
 
   $urlRouterProvider.otherwise("/");
