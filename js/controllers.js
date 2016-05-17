@@ -9,20 +9,20 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
     $scope.mySlides = [{
         image: 'img/slides/slide1.jpg',
-        title: 'Brigding',
-        text: 'lorem',
+        title: 'Brigding the gap.Positively',
+        text: 'Innergize solutions private limited is a statergy and management consultancy firm that provides a broad spectrum of services across diverse clientele that ranges from private corporations to financial institutions and even  high-net-worthy individuals.',
         pagelink: 'about-us',
         pagename: 'About Us'
     }, {
         image: 'img/slides/slide1.jpg',
-        title: 'Brigding',
-        text: 'lorem',
+        title: 'Brigding the gap.Positively',
+        text: 'Innergize solutions private limited is a statergy and management consultancy firm that provides a broad spectrum of services across diverse clientele that ranges from private corporations to financial institutions and even  high-net-worthy individuals.',
         pagelink: 'about-us',
         pagename: 'About Us'
     }, {
         image: 'img/slides/slide1.jpg',
-        title: 'Brigding',
-        text: 'lorem',
+        title: 'Brigding the gap.Positively',
+        text: 'Innergize solutions private limited is a statergy and management consultancy firm that provides a broad spectrum of services across diverse clientele that ranges from private corporations to financial institutions and even  high-net-worthy individuals.',
         pagelink: 'about-us',
         pagename: 'About Us'
     }];
@@ -94,6 +94,18 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
         $(window).scrollTop(0);
     });
+    $scope.showMenu = "menu-in";
+    $scope.showBar = "";
+    $scope.getMenu = function(){
+      if($scope.showMenu == "menu-out"){
+        $scope.showMenu = "menu-in";
+        $scope.showBar = "cross-bar";
+      }
+      else {
+        $scope.showMenu = "menu-out";
+        $scope.showBar = "";
+      }
+    };
 })
 
 .controller('languageCtrl', function($scope, TemplateService, $translate, $rootScope) {
