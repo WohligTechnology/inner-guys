@@ -80,6 +80,7 @@ a, .btn {
     top: 70px;
     right: 0;
     z-index: 3;
+    margin-top: 18px;
     background-color: rgba(123,129,133,0.64);
     .navigation {
       a {
@@ -92,11 +93,19 @@ a, .btn {
         text-transform: uppercase;
         &:hover {
           background-color: #646a6c;
+            border-left: 3px solid #fff;
         }
       }
 }
 }
-
+.social{
+  li{
+    .fa:hover
+{
+  border-left: transparent!important;
+}
+  }
+}
 .image-holder {position: relative;}
 
 .flex-control-paging li a.flex-active {
@@ -112,7 +121,7 @@ a, .btn {
     letter-spacing: 2px;
   }
   p{
-    width: 50%;
+    width: 48%;
     color: #fff;
     text-align: justify;
   }

@@ -8,16 +8,8 @@ if (isproduction) {
 var navigationservice = angular.module('navigationservice', [])
 
 .factory('NavigationService', function() {
-            var navigation = [{
-                    name: "Home",
-                    classis: "active",
-                    anchor: "home",
-                    subnav: [{
-                        name: "Subnav1",
-                        classis: "active",
-                        anchor: "home"
-                    }]
-                }, {
+            var navigation = [
+               {
                     name: "About Us",
                     classis: "active",
                     anchor: "about-us",
