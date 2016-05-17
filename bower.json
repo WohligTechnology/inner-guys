@@ -1,12 +1,12 @@
 {
-  "name": "AngularFrameworkFrontend",
-  "description": "AngularFrameworkFrontend",
+  "name": "Innergize",
+  "description": "Innergize",
   "main": "gulpfile.js",
   "authors": [
     "chintan@wohlig.com"
   ],
   "license": "ISC",
-  "homepage": "https://github.com/WohligTechnology/AngularFrameworkFrontend",
+  "homepage": "http://wohlig.co.in/innergize",
   "moduleType": [],
   "ignore": [
     "**/.*",
