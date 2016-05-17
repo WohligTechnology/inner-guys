@@ -18,37 +18,37 @@ var navigationservice = angular.module('navigationservice', [])
                         anchor: "home"
                     }]
                 }, {
-                    name: "ABOUT US",
+                    name: "About Us",
                     classis: "active",
                     anchor: "about-us",
                     subnav: []
                 }, {
-                    name: "SERVICES",
+                    name: "Services",
                     classis: "active",
                     anchor: "services",
                     subnav: []
                 }, {
-                    name: "AFFILIATES",
+                    name: "Affiliates",
                     classis: "active",
                     anchor: "affiliates",
                     subnav: []
                 }, {
-                    name: "CAREERS",
+                    name: "Careers",
                     classis: "active",
                     anchor: "careers",
                     subnav: []
                 }, {
-                    name: "CLIENTS",
+                    name: "Clients",
                     classis: "active",
                     anchor: "clients",
                     subnav: []
                 }, {
-                    name: "DOWNLOADS",
+                    name: "Downloads",
                     classis: "active",
                     anchor: "downloads",
                     subnav: []
                 }, {
-                    name: "CONTACT US",
+                    name: "Contact Us",
                     classis: "active",
                     anchor: "contact-us",
                     subnav: []

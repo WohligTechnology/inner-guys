@@ -40,7 +40,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 .controller('ServicesCtrl', function($scope, TemplateService, NavigationService, $timeout) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("services");
-    $scope.menutitle = NavigationService.makeactive("SERVICES");
+    $scope.menutitle = NavigationService.makeactive("Services");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
 })
@@ -51,7 +51,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 
     $scope.template = TemplateService.changecontent("affiliates");
-    $scope.menutitle = NavigationService.makeactive("AFFILIATES");
+    $scope.menutitle = NavigationService.makeactive("Affiliates");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
 })
@@ -62,7 +62,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 
     $scope.template = TemplateService.changecontent("clients");
-    $scope.menutitle = NavigationService.makeactive("CLIENTS");
+    $scope.menutitle = NavigationService.makeactive("Clients");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
 })
@@ -73,7 +73,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 
     $scope.template = TemplateService.changecontent("downloads");
-    $scope.menutitle = NavigationService.makeactive("DOWNLOADS");
+    $scope.menutitle = NavigationService.makeactive("Downloads");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
 })
@@ -84,7 +84,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 
     $scope.template = TemplateService.changecontent("contact-us");
-    $scope.menutitle = NavigationService.makeactive("CONTACT US");
+    $scope.menutitle = NavigationService.makeactive("Contact Us");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
 })
