@@ -1,10 +1,14 @@
-<flex-slider flex-slide="s in mySlides" prev-text="" next-text="">
+<flex-slider flex-slide="s in mySlides track by $index" prev-text="" next-text="">
 <li>
-    <img ng-src="{{s.image}}">
-    <div class="content-holder">
-      <h3>{{s.title}}</h3>
-      <p>{{s.text}}</p>
-      <a ui-sref="{{s.pagelink}}" class="btn btn-clear text-uppercase">{{s.pagename}} <i class="fa fa-angle-right"></i></a>
+    <div class="image-holder">
+        <img ng-src="{{s.image}}">
+        <div class="content-holder">
+            <h3>{{s.title}}</h3>
+            <p>{{s.text}}</p>
+            <a ui-sref="{{s.pagelink}}" class="btn btn-clear text-uppercase">{{s.pagename}}
+                <i class="fa fa-angle-right"></i>
+            </a>
+        </div>
     </div>
 </li>
 </flex-slider>
