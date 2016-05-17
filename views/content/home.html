@@ -1,9 +1,10 @@
-<div class="container">
-
-    <flex-slider flex-slide="s in mySlides" prev-text="" next-text="">
-        <li>
-            <img ng-src="{{s}}">
-        </li>
-    </flex-slider>
-
-</div>
+<flex-slider flex-slide="s in mySlides" prev-text="" next-text="">
+<li>
+    <img ng-src="{{s.image}}">
+    <div class="content-holder">
+      <h3>{{s.title}}</h3>
+      <p>{{s.text}}</p>
+      <a ui-sref="{{s.pagelink}}" class="btn btn-clear text-uppercase">{{s.pagename}} <i class="fa fa-angle-right"</i></a>
+    </div>
+</li>
+</flex-slider>
