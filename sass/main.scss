@@ -111,14 +111,14 @@ a, .btn {
 .flex-control-paging li a.flex-active {background-color: #fff;}
 
 .content-holder {
-  @include position(absolute,54% null null 6%);
+  @include position(absolute, null 0 45px 0);
   h3{
     color: #fff;
     font-size: 32px;
     font-family: "Didot";
     letter-spacing: 2px;
   }
-  p{
+  p {
     width: 48%;
     color: #fff;
     text-align: justify;
@@ -200,7 +200,11 @@ a, .btn {
   }
 }
 
-
+.page-auto {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 /*footer ends*/
 /* Start writing sass here */
