@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Lato);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900);
 @import "../bower_components/bourbon/app/assets/stylesheets/bourbon";
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins";
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap-sprockets";
@@ -11,6 +11,11 @@ $brand-success: #84ce3c !default;
 $brand-warning: #ffec39 !default;
 $brand-danger: #fc483f !default;
 $brand-info: #000072 !default;
+
+$facebook: #3a579d !default;
+$linkedin: #0077B5 !default;
+$twitter: #49c8f5 !default;
+
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
 @font-face {
   font-family: "Didot";
@@ -85,13 +90,28 @@ a, .btn {
     background-color: rgba(123,129,133,0.75);
     overflow-y: auto;
     .navigation {
+      .fb {
+        a:hover {
+          background-color: $facebook;
+        }
+      }
+      .tw {
+        a:hover {
+          background-color: $twitter;
+        }
+      }
+      .lk {
+        a:hover {
+          background-color: $linkedin;
+        }
+      }
       a {
         padding: 15px 20px;
         display: block;
         text-decoration: none;
         color: #fff;
         font-size: 16px;
-        font-weight: 600;
+        font-weight: 700;
         text-transform: uppercase;
         border-left: 3px solid transparent;
         &:hover {
@@ -209,3 +229,4 @@ a, .btn {
 /*footer ends*/
 /* Start writing sass here */
 @import "fancybox-override";
+@import "mobile";
