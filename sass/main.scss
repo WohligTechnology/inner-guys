@@ -15,12 +15,11 @@ $brand-info: #000072 !default;
 @font-face {
   font-family: "Didot";
   src: url("../fonts/didot.ttf");
+  src: url("../fonts/didot.eot#iefix") format("embedded-opentype"), url("../fonts/didot.ttf") format("truetype"), url("../fonts/didot.svg") format("svg");
 }
 body {
-  padding-top: 88px;
+  padding-top: 70px;
   font-family: 'Lato', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 img.loading {
   text-align: center;
@@ -66,53 +65,48 @@ a, .btn {
 
 .fixed-header {
   width: 100%;
+  height: 80px;
   padding: 10px 0;
   position: fixed;
   top: 0;
   left: 0;
   background-color: white;
   z-index: 4;
-  height: 88px;
 }
 .menu {
     width: 227px;
     height: 100%;
     max-width: 400px;
     position: fixed;
-    top: 88px;
+    top: 70px;
     right: 0;
     z-index: 3;
-    background-color: rgba(123,129,133,0.75);
+    margin-top: 18px;
+    background-color: rgba(123,129,133,0.64);
     .navigation {
       a {
-        display: block;
         padding: 15px 20px;
+        display: block;
         text-decoration: none;
         color: #fff;
         font-size: 16px;
         font-weight: 600;
         text-transform: uppercase;
-        border-left: 3px solid transparent;
         &:hover {
-          background-color: #646a6c;
           border-left: 3px solid #fff;
+          background-color: #646a6c;
         }
       }
 }
 }
 .social{
-  li{
-    .fa:hover
-{
-  border-left: transparent!important;
-}
-  }
+    .fa:hover{
+        border-left: transparent!important;
+      }
 }
 .image-holder {position: relative;}
 
-.flex-control-paging li a.flex-active {
-    background-color: #fff;
-  }
+.flex-control-paging li a.flex-active {background-color: #fff;}
 
 .content-holder {
   @include position(absolute,54% null null 6%);
@@ -138,14 +132,13 @@ a, .btn {
 }
 
 .hamburger {
-  margin: 7px 0 0 0;
+  margin: 15px 0 0 0;
   .navbar-toggle {
     display: inline-block;
     background-color: transparent!important;
-    .icon-bar {
-      background-color: #646a6c;
+    span.icon-bar {
       height: 3px;
-      @include transition(all 300ms ease);
+      background-color: #646a6c;
   }
 }
 }
@@ -170,8 +163,7 @@ a, .btn {
 }
 .flex-control-nav {
     width: 100%;
-    position: absolute;
-    bottom: 20px;
+    @include position(absolute,null null 20px null);
     text-align: center;
     z-index: 3;
 }
@@ -202,6 +194,8 @@ a, .btn {
     text-decoration: none;
   }
 }
+
+
 
 /*footer ends*/
 /* Start writing sass here */

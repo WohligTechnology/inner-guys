@@ -94,16 +94,16 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
         $(window).scrollTop(0);
     });
-    $scope.showMenu = "menu-in";
     $scope.showBar = "";
+    $scope.showMenu = "menu-in";
     $scope.getMenu = function(){
       if($scope.showMenu == "menu-out"){
         $scope.showMenu = "menu-in";
-        $scope.showBar = "cross-bar";
+        $scope.showBar = "";
       }
       else {
         $scope.showMenu = "menu-out";
-        $scope.showBar = "";
+        $scope.showBar = "cross-bar";
       }
     };
 })
