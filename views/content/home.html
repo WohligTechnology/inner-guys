@@ -1,7 +1,8 @@
 <flex-slider flex-slide="s in mySlides track by $index" prev-text="" next-text="">
 <li>
     <div class="image-holder">
-        <img ng-src="{{s.image}}">
+        <!-- <img ng-src="{{s.image}}"> -->
+        <div class="page-auto" ng-style="{'background-image': 'url('+s.image+')', 'height': autoHeight+'px'}"></div>
         <div class="content-holder">
             <h3 class="text-uppercase">{{s.title}}</h3>
             <p>{{s.text}}</p>

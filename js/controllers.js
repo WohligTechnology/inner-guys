@@ -27,6 +27,9 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         pagename: 'About Us'
     }];
 
+    angular.element(document).ready(function () {
+      $scope.autoHeight = $(document).height() - 120;
+    });
 })
 
 .controller('AboutCtrl', function($scope, TemplateService, NavigationService, $timeout) {

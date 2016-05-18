@@ -6,7 +6,7 @@
 @import "../bower_components/font-awesome/css/font-awesome.min.css";
 @import "../bower_components/fancyBox/source/jquery.fancybox.css";
 /* Bootstrap Variables Goes Here */
-$brand-primary: #0d9dff !default;
+$brand-primary: #0095D7 !default;
 $brand-success: #84ce3c !default;
 $brand-warning: #ffec39 !default;
 $brand-danger: #fc483f !default;
@@ -127,8 +127,9 @@ a, .btn {
     color: #fff;
     display: inline-block;
     padding: 0;
+    padding-right: 5px;
     &:hover{
-      color: #0d9dff;
+      color: $brand-primary;
     }
   }
 }
@@ -194,7 +195,7 @@ a, .btn {
 
 .footer-text{
   a:hover{
-    color: #0d9dff;
+    color: $brand-primary;
     text-decoration: none;
   }
 }
