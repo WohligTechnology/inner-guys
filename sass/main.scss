@@ -11,17 +11,22 @@ $brand-success: #84ce3c !default;
 $brand-warning: #ffec39 !default;
 $brand-danger: #fc483f !default;
 $brand-info: #000072 !default;
-
 $facebook: #3a579d !default;
 $linkedin: #0077B5 !default;
 $twitter: #49c8f5 !default;
-
+$top-height: 81px;
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
 @font-face {
   font-family: "Didot";
   src: url("../fonts/didot.ttf");
 }
-$top-height: 81px;
+.row-flex {
+  @include display(flex);
+}
+.col-flex {
+  @include flex(1);
+  @include position(relative);
+}
 body {
   padding-top: $top-height;
   font-family: 'Lato', sans-serif;
@@ -44,9 +49,17 @@ img.doneLoading {
 nav li:hover .dropdown-menu {
   display: block;
 }
-a, .btn {
+a,
+.btn {
   cursor: pointer;
   @include transition(all ease 300ms);
+}
+a {
+  color: #5f5f5f;
+  &:hover {
+    color: darken(#5f5f5f, 10%);
+    text-decoration: none;
+  }
 }
 //bootstrap forms
 .input-lg,
@@ -63,13 +76,85 @@ a, .btn {
   outline: 0;
   @include box-shadow(none);
 }
+.main-banner {
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+.banner2 {
+  position: relative;
+  font-family: didot;
+}
+.banner {
+  min-height: 100%;
+  z-index: 1;
+  font-family: didot;
+  position: relative;
+}
+.client-banners {
+  background: url("../img/clients/client.jpg") center center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.affilliates-banners {
+  background: url("../img/affilliates/affilliates.jpg") center center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.contact-banners {
+  background: url("../img/contact/contact.jpg") center center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.carrers-banners {
+  background: url("../img/contact/contact.jpg") center center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.head-font {
+  text-align: center;
+  width: 100%;
+  h1 {
+    margin-top: 0;
+    font-size: 40px;
+  }
+}
+.bck-color {
+  background: #ebebeb;
+  position: relative;
+}
+.overview-box {
+  @include position(absolute, 50% null null 50%);
+  @include transform (translatex(-50%) translatey(-50%));
+  width: 60%;
+  height: 300px;
+  overflow: auto;
+}
+.up-side {
+  @include position(absolute, 50% null null 50%);
+  @include transform (translatex(-50%) translatey(-50%));
+  h1 {
+    font-size: 68px;
+    color: #CACACA;
+    font-family: 'didot';
+    padding-top: 100px;
+  }
+}
+.head-font {
+  @extend .up-side;
+  text-transform: uppercase;
+  h1 {
+    padding-top: 0;
+  }
+}
 //bootstrap forms
 .flexslider {
   margin: 0;
-  border: 0px solid #ffffff;
+  border: 0 solid #ffffff;
 }
-.flex-direction-nav {display: none;}
-
+.flex-direction-nav {
+  display: none;
+}
 .fixed-header {
   width: 100%;
   height: $top-height;
@@ -81,58 +166,60 @@ a, .btn {
   z-index: 4;
 }
 .menu {
-    width: 270px;
-    height: 100%;
-    position: fixed;
-    top: $top-height;
-    right: 0;
-    z-index: 3;
-    background-color: rgba(123,129,133,0.75);
-    overflow-y: auto;
-    .navigation {
-      .fb {
-        a:hover {
-          background-color: $facebook;
-        }
+  width: 270px;
+  height: 100%;
+  position: fixed;
+  top: $top-height;
+  right: 0;
+  z-index: 3;
+  background-color: rgba(123,129,133,0.75);
+  overflow-y: auto;
+  .navigation {
+    .fb {
+      a:hover {
+        background-color: $facebook;
       }
-      .tw {
-        a:hover {
-          background-color: $twitter;
-        }
+    }
+    .tw {
+      a:hover {
+        background-color: $twitter;
       }
-      .lk {
-        a:hover {
-          background-color: $linkedin;
-        }
+    }
+    .lk {
+      a:hover {
+        background-color: $linkedin;
       }
-      a {
-        padding: 15px 20px;
-        display: block;
-        text-decoration: none;
-        color: #fff;
-        font-size: 16px;
-        font-weight: 700;
-        text-transform: uppercase;
-        border-left: 3px solid transparent;
-        &:hover {
-          border-left: 3px solid #fff;
-          background-color: #646a6c;
-        }
+    }
+    a {
+      padding: 15px 20px;
+      display: block;
+      text-decoration: none;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 700;
+      text-transform: uppercase;
+      border-left: 3px solid transparent;
+      &:hover {
+        border-left: 3px solid #fff;
+        background-color: #646a6c;
       }
+    }
   }
 }
-.social{
-    .fa:hover {
-        border-left: transparent!important;
-      }
+.social {
+  .fa:hover {
+    border-left: transparent!important;
+  }
 }
-.image-holder {position: relative;}
-
-.flex-control-paging li a.flex-active {background-color: #fff;}
-
+.image-holder {
+  position: relative;
+}
+.flex-control-paging li a.flex-active {
+  background-color: #fff;
+}
 .content-holder {
   @include position(absolute, null 0 45px 0);
-  h3{
+  h3 {
     color: #fff;
     font-size: 32px;
     font-family: "Didot";
@@ -143,19 +230,17 @@ a, .btn {
     color: #fff;
     text-align: justify;
   }
-  .btn-clear{
+  .btn-clear {
     color: #fff;
     display: inline-block;
-    padding: 0;
-    padding-right: 5px;
-    &:hover{
+    padding: 0 5px 0 0;
+    &:hover {
       color: $brand-primary;
     }
   }
 }
-
 .hamburger {
-  margin: 10px 0 0 0;
+  margin: 10px 0 0;
   .navbar-toggle {
     display: inline-block;
     background-color: transparent!important;
@@ -180,52 +265,99 @@ a, .btn {
     @include transform(rotate(45deg));
     @include position(relative, 7px null null null);
   }
-  span:nth-child(2) { opacity: 0;}
+  span:nth-child(2) {
+    opacity: 0;
+  }
   span:last-child {
     @include transform(rotate(-45deg));
     @include position(relative, -7px null null null);
   }
 }
 .flex-control-nav {
-    width: 100%;
-    @include position(absolute,null null 20px null);
-    text-align: center;
-    z-index: 3;
+  width: 100%;
+  @include position(absolute,null null 20px null);
+  text-align: center;
+  z-index: 3;
 }
-
 .logo {
-    display: inline-block;
-    img {
-      width: auto;
-      height: 60px;
-    }
+  display: inline-block;
+  img {
+    width: auto;
+    height: 60px;
+  }
 }
-
-
 /*footer*/
-.footers{
-  padding: 10px 0 0 0;
-  background-color:#35393c;
+.footers {
+  padding: 10px 0 0;
+  background-color: #35393c;
 }
-.footer-text{
-  p,a{
+.footer-text {
+  p,
+  a {
     color: #fff;
   }
 }
-
-.footer-text{
-  a:hover{
+.footer-text {
+  a:hover {
     color: $brand-primary;
     text-decoration: none;
   }
 }
-
 .page-auto {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-
+.clients {
+  li {
+    display: inline-block;
+    width: 33%;
+    margin: 10px 0;
+    &:before {
+      content: "\f111";
+      font-family: FontAwesome;
+      color: $brand-primary;
+      font-size: 6px;
+      vertical-align: middle;
+      margin-right: 4px;
+    }
+  }
+}
+.getintouch {
+  .form-control {
+    border: 0 solid #ccc;
+    border-radius: 0;
+    -webkit-box-shadow: inset 0 0 0 rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 0 0 rgba(0, 0, 0, 0.075);
+    border-bottom: 1px solid #D6D6D6;
+  }
+}
+.font-weight300,
+.title h5 {
+  font-weight: 300;
+}
+textarea {
+  resize: none;
+}
+.submit-btn {
+  text-align: right;
+  .submit {
+    font-size: 18px;
+    font-weight: 600;
+    color: #5f5f5f;
+    &:hover {
+      color: #5f5f5f;
+      text-decoration: none;
+    }
+  }
+}
+.contact {
+  font-weight: 300;
+  p {
+    line-height: 100%;
+    font-size: 18px;
+  }
+}
 /*footer ends*/
 /* Start writing sass here */
 @import "fancybox-override";

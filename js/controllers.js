@@ -50,9 +50,6 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 .controller('AffiliatesCtrl', function($scope, TemplateService, NavigationService, $timeout) {
   //Used to name the .html file
-
-
-
   $scope.template = TemplateService.changecontent("affiliates");
   $scope.menutitle = NavigationService.makeactive("Affiliates");
   TemplateService.title = $scope.menutitle;
@@ -66,34 +63,29 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   TemplateService.title = $scope.menutitle;
   $scope.navigation = NavigationService.getnav();
   $scope.client = [{
-    img: "img/client/c1.jpg"
+    img: "img/clients/c1.jpg"
 
   }, {
-    img: "img/client/c2.png"
+    img: "img/clients/c2.jpg"
 
   }, {
-    img: "img/client/c3.png"
+    img: "img/clients/c3.jpg"
 
   }, {
-    img: "img/client/c4.png"
+    img: "img/clients/c4.jpg"
 
   }, {
-    img: "img/client/c5.png"
+    img: "img/clients/c5.jpg"
 
   }, {
-    img: "img/client/c6.png"
+    img: "img/clients/c6.jpg"
 
   }, {
-    img: "img/client/c7.png"
+    img: "img/clients/c7.jpg"
 
   }, {
-    img: "img/client/c8.png"
+    img: "img/clients/c8.jpg"
 
-  }, {
-    img: "img/client/c9.png"
-
-  }, {
-    img: "img/client/c10.png"
   }];
 })
 
@@ -110,11 +102,15 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 .controller('ContactCtrl', function($scope, TemplateService, NavigationService, $timeout) {
   //Used to name the .html file
-
-
-
   $scope.template = TemplateService.changecontent("contact-us");
   $scope.menutitle = NavigationService.makeactive("Contact Us");
+  TemplateService.title = $scope.menutitle;
+  $scope.navigation = NavigationService.getnav();
+})
+.controller('CareersCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+  //Used to name the .html file
+  $scope.template = TemplateService.changecontent("careers");
+  $scope.menutitle = NavigationService.makeactive("Careers");
   TemplateService.title = $scope.menutitle;
   $scope.navigation = NavigationService.getnav();
 })
