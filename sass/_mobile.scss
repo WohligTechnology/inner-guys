@@ -15,4 +15,38 @@
       text-align: center;
     }
   }
+  .head-font h1 {
+    padding-top: 0;
+    font-size: 36px;
+  }
+  .row-flex.display-block-mobile {
+    display: block;
+  }
+  .overview-box {
+    position: static;
+    @include transform(translate(0));
+    width: 100%;
+    padding: 20px;
+    margin: 20px 0;
+  }
+  .services-list .panel-group .panel-default .panel-heading h4 {
+    font-size: 14px;
+    i {
+      color: #979797;
+      display: none;
+    }
+  }
+  .services-box-white {
+    margin-top: -60px;
+    padding: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .dot-blue li:before {
+    margin-right: 8px;
+  }
+  .clients li {
+    width: 49%;
+    margin: 5px 0;
+  }
 }

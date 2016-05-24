@@ -198,7 +198,7 @@ firstapp.directive('autoHeight', function($compile, $parse) {
     link: function($scope, element, attrs) {
       var $element = $(element);
       var windowHeight = $(window).height();
-      var newheight= windowHeight- 250;
+      var newheight= windowHeight- 300;
       var addHeight = function() {
         $element.css("min-height", newheight);
       };
