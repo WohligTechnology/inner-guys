@@ -35,10 +35,10 @@ $top-height: 81px;
   @include flex(1);
   @include position(relative);
 }
-.font-didot{
+.font-didot {
   font-family: "Didot";
 }
-.uppercase{
+.uppercase {
   text-transform: uppercase;
 }
 body {
@@ -70,7 +70,8 @@ a,
 }
 a {
   color: #5f5f5f;
-  &:hover,&:focus {
+  &:hover,
+  &:focus {
     color: darken(#5f5f5f, 30%);
     text-decoration: none;
     outline: none;
@@ -350,7 +351,7 @@ a {
     // }
   }
 }
-.bold{
+.bold {
   font-weight: 600;
 }
 .dot-blue {
@@ -517,6 +518,55 @@ textarea {
 }
 .philosophy-box h5 {
   text-transform: uppercase;
+}
+.error-msg {
+  color: #FF3030;
+}
+.submit-over h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: #000;
+  font-size: 40px;
+  font-weight: 700;
+}
+.rl {
+  position: relative;
+}
+.checkbox-inline + .checkbox-inline {
+  margin-left: 0;
+}
+.checkbox-inline {
+  color: #555555;
+  padding-left: 15px;
+  input[type=checkbox] {
+    display: none;
+  }
+}
+.checkbox-inline {
+  input[type=checkbox] {
+    display: none;
+  }
+  input[type=checkbox]+label span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: -1px 4px 0 0;
+    cursor: pointer;
+    border: 1px solid $brand-primary;
+    background-color: #ebebeb;
+  }
+  input[type=checkbox]:checked+label span {
+    background-color: $brand-primary;
+  }
+  label {
+    font-weight: 400;
+    cursor: pointer;
+  }
+}
+.submit-over {
+  height: 150px;
 }
 /*footer ends*/
 /* Start writing sass here */

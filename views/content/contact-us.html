@@ -40,54 +40,96 @@
         </div>
       </div>
     </div>
-    <div class="pt50">
+    <div class="pt50 rl">
       <div class="text-center pt30">
         <h1 class="font-weight300">GET IN TOUCH</h1>
       </div>
       <div class="row pt30">
         <div class="col-md-offset-2 col-md-8">
-          <div class="row">
-            <form action="contactForm">
+          <form name="contactForm" ng-hide="thankyouact">
+            <div class="row">
               <div class="col-md-6">
                 <div class="form-group getintouch">
-                  <input type="text" class="form-control" ng-model="contactData.name" placeholder="Name*" required>
+                  <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Name*" name="name" ng-model="formData.name" required>
                   <div class="error-msg" ng-show="contactForm.name.$error.required && contactForm.name.$touched">Please Enter Your Name.</div>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group getintouch">
-                  <input type="text" class="form-control" ng-model="contactData.company"  placeholder="Company">
+                  <input type="text" class="form-control" ng-model="formData.company" placeholder="Company">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group getintouch">
+                  <input type="tel" class="form-control" ng-model="formData.phone" placeholder="Phone">
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group getintouch">
-                  <input type="tel" class="form-control" ng-model="contactData.phone" placeholder="Phone">
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="form-group getintouch">
-                  <input type="email" class="form-control" ng-model="contactData.email" placeholder="Email*" required>
+                  <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email*" name="email" ng-model="formData.email" required>
                   <div class="error-msg" ng-show="contactForm.email.$error.required && contactForm.email.$touched">Please Enter Your Email.</div>
                 </div>
               </div>
+            </div>
+            <div class="row">
               <div class="col-md-12">
                 <div class="form-group getintouch">
-                  <input type="text" class="form-control" ng-model="contactData.website" placeholder="Website">
+                  <input type="text" class="form-control" ng-model="formData.website" placeholder="Website">
                 </div>
-              </div>
-              <div class="col-md-12">
-                <div class="form-group getintouch">
-                  <textarea name=""  class="form-control" ng-model="contactData.comments" placeholder="Comments"></textarea>
-                </div>
-              </div>
-            </form>
-          </div>
-          <div class="row pb30">
-            <div class="col-md-12">
-              <div class="submit-btn float-right">
-                <a href="" class="submit"   ng-class="{'disabled' : !contactForm.$valid }" ng-click="contactSubmitForm(contactForm,contactData)">Submit</a>
               </div>
             </div>
+            <div class="row">
+              <div class="col-md-12">
+                <label class="text-label" style="margin-left: 15px;">
+                  <span class="color-red">Services Required </span>
+                </label>
+                <div class="enq-list">
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="strategic" ng-click="pushorpop('Strategic Financial And Business Consulting')">
+                    <label for="strategic"><span></span> Strategic, Financial And Business Consulting</label>
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="distribution" ng-click="pushorpop('Transaction Support And Due Diligence')">
+                    <label for="distribution"><span></span> Transaction Support And Due Diligence</label>
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="execution" ng-click="pushorpop('Execution Support')">
+                    <label for="execution"><span></span> Execution Support</label>
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="advisory" ng-click="pushorpop('Advisory On Foreign Business Setup In India')">
+                    <label for="advisory"><span></span> Advisory On Foreign Business Setup In India</label>
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="healthcare" ng-click="pushorpop('Healthcare Infrastructure Consulting')">
+                    <label for="healthcare"><span></span> Healthcare Infrastructure Consulting</label>
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="others" ng-click="pushorpop('Others')">
+                    <label for="others"><span></span> Others</label>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group getintouch">
+                  <textarea name="" class="form-control" ng-model="formData.comments" placeholder="Comments"></textarea>
+                </div>
+              </div>
+            </div>
+            <div class="row pb30">
+              <div class="col-md-12">
+                <div class="submit-btn float-right">
+                  <a href="" class="color-primary" ng-class="{'disabled' : !contactForm.$valid }" ng-click="submitContactForm(contactForm,formData)">Submit</a>
+                </div>
+              </div>
+            </div>
+          </form>
+          <div class="submit-over" ng-show="thankyouact">
+            <h2>Thank You!!</h2>
           </div>
         </div>
       </div>

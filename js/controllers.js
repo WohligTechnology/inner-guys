@@ -108,9 +108,6 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 .controller('DownloadsCtrl', function($scope, TemplateService, NavigationService, $timeout) {
   //Used to name the .html file
-
-
-
   $scope.template = TemplateService.changecontent("downloads");
   $scope.menutitle = NavigationService.makeactive("Downloads");
   TemplateService.title = $scope.menutitle;
@@ -118,19 +115,61 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 })
 
 .controller('ContactCtrl', function($scope, TemplateService, NavigationService, $timeout) {
-    //Used to name the .html file
-    $scope.template = TemplateService.changecontent("contact-us");
-    $scope.menutitle = NavigationService.makeactive("Contact Us");
-    TemplateService.title = $scope.menutitle;
-    $scope.navigation = NavigationService.getnav();
-  })
-  .controller('CareersCtrl', function($scope, TemplateService, NavigationService, $timeout) {
-    //Used to name the .html file
-    $scope.template = TemplateService.changecontent("careers");
-    $scope.menutitle = NavigationService.makeactive("Careers");
-    TemplateService.title = $scope.menutitle;
-    $scope.navigation = NavigationService.getnav();
-  })
+  //Used to name the .html file
+  $scope.template = TemplateService.changecontent("contact-us");
+  $scope.menutitle = NavigationService.makeactive("Contact Us");
+  TemplateService.title = $scope.menutitle;
+  $scope.navigation = NavigationService.getnav();
+  $scope.formData = {};
+  $scope.formData.enquiryarr = [];
+
+  $scope.submitContactForm = function(formValid) {
+    $scope.formData.enquiry = "";
+    if (formValid.$valid && $scope.formData) {
+      if ($scope.formData.enquiryarr.length > 0) {
+        _.each($scope.formData.enquiryarr, function(n) {
+          $scope.formData.enquiry += n + ",";
+        })
+        $scope.formData.enquiry = $scope.formData.enquiry.substring(0, $scope.formData.enquiry.length - 1);
+      }
+      $scope.formData.services = $scope.formData.enquiryarr.toString();
+      NavigationService.submitContact($scope.formData, function(data) {
+        console.log(data);
+        if (data.value != false) {
+          $scope.thankyouact = true;
+        }
+      });
+    }
+  };
+
+  $scope.pushorpop = function(val) {
+    var foundIndex = $scope.formData.enquiryarr.indexOf(val);
+    if (foundIndex == -1) {
+      $scope.formData.enquiryarr.push(val);
+    } else {
+      $scope.formData.enquiryarr.splice(foundIndex, 1);
+    }
+  }
+})
+
+.controller('CareersCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+  //Used to name the .html file
+  $scope.template = TemplateService.changecontent("careers");
+  $scope.menutitle = NavigationService.makeactive("Careers");
+  TemplateService.title = $scope.menutitle;
+  $scope.navigation = NavigationService.getnav();
+  $scope.formData = {};
+  $scope.submitCareersForm = function(formValid) {
+    if (formValid.$valid && $scope.formData) {
+      NavigationService.submitCareers($scope.formData, function(data) {
+        console.log(data);
+        if (data.value != false) {
+          $scope.thankyouact = true;
+        }
+      });
+    }
+  };
+})
 
 .controller('headerctrl', function($scope, TemplateService) {
   $scope.template = TemplateService;
@@ -169,8 +208,4 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     }
     //  $rootScope.$apply();
   };
-
-
-})
-
-;
+});
