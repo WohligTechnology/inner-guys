@@ -48,20 +48,20 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   $scope.navigation = NavigationService.getnav();
   $scope.oneAtATime = true;
   $scope.services = [{
-    title: "STRATEGIC, FINANCIAL AND BUSINESS CONSULTING",
-    content: "<p>A holistic approach to diverse business needs in a dynamic economic climate. We review and optimize your business strategy, not just from a financial point of view but also from an overall business, legal and a long-term growth perspective.</p><ul class='dot-blue dot-grey list-unstyled'><li>Strategic Consulting Services</li><li>Corporate Structuring Advisory Services</li><li>Financial Structuring and Planning Services</li><li>Project Feasibility Report Preparation</li><li>Direct and Indirect Taxation Planning</li><li>Financial, Legal, Liability and Business Risks Identification and Mitigation Services</li></ul>"
+    title: "Strategic, Financial and Business Management",
+    content: "<p>We have a holistic approach to diverse business needs in a dynamic economic climate. We review and optimize your business strategy, not just from a financial point of view but also from an overall business, legal and a long-term growth perspective.</p><ul class='dot-blue dot-grey list-unstyled'><li>Strategic Consulting Services</li><li>Business Model Planning</li><li>Corporate Structuring Advisory Services</li><li>Financial Structuring and Planning Services</li><li>Project Feasibility Report Preparation</li><li>Direct and Indirect Taxation Planning</li><li>Financial, Legal, Liability and Business Risks Identification and Mitigation Services</li></ul>"
   }, {
     title: "TRANSACTION SUPPORT AND DUE DILIGENCE",
-    content: "<p>In the globalized market of strategic investment and mergers and acquisitions, you need a partner who can unlock hidden value and avoid commercial pitfalls.</p><ul class='dot-blue dot-grey list-unstyled'><li>Financial, Tax, Legal, IPR, Human Resources and Business Due Diligence</li><li>Identification of Value Drivers</li><li>Identification of Risks and Risk Mitigation Approaches</li><li>Transaction Structuring</li><li>Financial Forecasting and Assumption Evaluation</li><li>Feasibility Studies</li><li>Working Capital Assessments</li></ul>"
+    content: "<p>In the globalized market of strategic investment and mergers and acquisitions, you need a partner who can unlock hidden value and avoid commercial pitfalls.</p><ul class='dot-blue dot-grey list-unstyled'><li>Financial, Tax, Legal, IPR, Human Resources and Business Due Diligence</li><li>Identification of Value Drivers</li><li>Identification of Risks and Risk Mitigation Approaches</li><li>Transaction Structuring</li><li>Financial Forecasting and Assumption Evaluation</li><li>Feasibility Studies</li><li>Working Capital Assessments</li><li>	Negotiation Support</li><li>Internal Control Evaluation </li><li>Agreed Upon Processes </li></ul>"
   }, {
     title: "EXECUTION SUPPORT",
-    content: "<p>Putting together a strategy is one thing, executing it is a whole other thing. Unlike most strategic consultants, we ensure that the strategy is implemented across all levels, creating real and effective change in the organization.</p><ul class='dot-blue dot-grey list-unstyled'><li>Planning and Budgeting Support</li><li>Reporting Processes Support</li><li>Long Term and Short Term Financial Arrangement Support</li><li>Performance Management Support</li><li>Legal Documentation Support</li><li>Human Resource Management Support</li><li>Risk Mitigation Support</li></ul>"
+    content: "<p>Putting together a strategy is one thing, executing it is a whole other thing. Unlike most strategy and management consultants, we ensure that the strategy is implemented across all levels, creating real and effective change in the organization.</p><ul class='dot-blue dot-grey list-unstyled'><li>Planning and Budgeting Support</li><li>Reporting Processes Support</li><li>Long Term and Short Term Financial Arrangement Support</li><li>Performance Management Support</li><li>Legal Documentation Support</li><li>Human Resource Management Support</li><li>Risk Mitigation Support</li><li>Intellectual Property Portfolio Management Support</li><li>Currency and Treasury Management Support</li><li>Business Integration Support (in Mergers and Amalgamations) </li><li>IPO Support </li><li>Corporate Governance Support</li></ul>"
   }, {
     title: "ADVISORY ON FOREIGN BUSINESS SETUP IN INDIA",
-    content: "<p>In recent years, India has been attracting numerous foreign companies who are keen on tapping its vast potential. But the country being a maze of varied population, traditions and culture, time-consuming registrations, bureaucratic clearances, linguistic hurdles and red tape; the lucrative opportunity translates into a tricky challenge while understanding its social and business nuances.</p><p>To interpret this multi-cultural and political mélange; Innergize Solutions assists these foreign companies to build their foundation in India and propel them in the direction of success. We offer a portfolio of services that encompass everything from secretarial, legal, accounting, taxation, intellectual property, financial, human resources and much more to ensure that every essential aspect is implemented systematically, without having to repeatedly approach multiple agencies. These services can be totally customized according to specific needs which would enable the global entities to confidently establish and smoothly commence and sustain operations in India.</p><p>Powering the Foreign Business Setup team is Anupa Shah, a Chartered Accountant, who is highly conversant and experienced in finance, taxation and corporate matters. It is her incisive thinking and in-depth understanding which are extensively used to seamless solutions that deliver beyond client specifications. Coupled with her leadership and organizational skills; Innergize has an expert team of professionals who would provide strategic advice, assistance, execution and support at every stage to any foreign company or investor entering India.</p><p>Our one stop shop offers following spectrum of services:</p><ul class='dot-blue dot-grey list-unstyled'><li>Company Formation</li><li>Secretarial Compliances</li><li>Regulatory Compliances</li><li>Direct Tax Registrations and Compliances</li><li>Indirect Taxation and Registrations</li><li>Manpower, Remuneration and HR Related Procedures and Compliances</li><li>Business Planning and Operations</li><li>Financing of Business Operations</li><li>IFRS Implementation Services</li><li>Legal Support Services</li><li>Intellectual Property Services</li><li>Other Support Services</li></ul>"
+    content: "<p>In recent years, India has been attracting numerous foreign companies who are keen on tapping its vast potential. But the country being a maze of varied population, traditions and cultures, time-consuming registrations, bureaucratic clearances, linguistic hurdles and red tape; the lucrative opportunity translates into a tricky challenge while understanding its social and business nuances.</p><p>To interpret this multi-cultural and political mélange; Innergize Solutions assists foreign companies to build their foundation in India and propel them in the direction of success. We offer a portfolio of services that encompass everything from secretarial, legal, accounting, taxation, intellectual property, financial, human resources and much more to ensure that every essential aspect is implemented systematically, without having to repeatedly approach multiple agencies. These services can be totally customized according to specific needs which would enable the foreign entities to confidently establish and smoothly commence and sustain operations in India.</p><p>The Foreign Business Support team is highly conversant and experienced in finance, taxation and corporate matters. Our expert team of professionals provide strategic advice, assistance, execution and continued support at every stage to any foreign company or investor before and after entering India.</p><p>Our comprehensive spectrum includes the following services:</p><ul class='dot-blue dot-grey list-unstyled'><li>Company Formation</li><li>Secretarial Compliances</li><li>Regulatory Compliances</li><li>Direct Tax Registrations and Compliances</li><li>Indirect Taxation and Registrations</li><li>Manpower, Remuneration and HR Related Procedures and Compliances</li><li>Business Planning and Operations</li><li>Financing of Business Operations</li><li>IFRS Implementation Services</li><li>Legal Support Services</li><li>Intellectual Property Services</li><li>Other Support Services</li></ul>"
   }, {
-    title: "INDIAN HEALTHCARE INFRASTRUCTURE CONSULTING",
-    content: "<p>Indian healthcare sector has become highly competitive and  in order to keep pace with the ever changing environment;Innergize has developed a strong strategy, management practice and an experienced team to shoulder challenging projects and operations of its clients in healthcare arena. We further strengthen our reputation by providing dedicated healthcare advisory services from strategy to implementation. </p><p>We support our public and private clients to redefine their healthcare strategy in order to achieve enhanced quality and economically viable operations. We understand their needs and provide answers with tailored approach through a combination of strategic, operational and financial skills. </p><p>Healthcare Infrastructure Consulting is headed by <b>Dr. Arun John</b>, a Healthcare Management consultant with over 30 years of Hospital &amp; Health Care industry experience and has a successful association with major names in healthcare industry. His forte lies in hospital and healthcare projects, wherein he brings a matured experience, right from conceptualization, designing, commissioning to making it a commercial success.</p><ul class='dot-blue dot-grey list-unstyled'><li>Greenfield Projects</li><li>Tendering and Project Management Support</li><li>Upgradation and Modernization</li><li>Architectural and Structural Design</li><li>Strategic, Financial and Business Consulting Services</li><li>Transaction Support and Due Diligence Services</li><li>Execution Support Services</li><li>Accreditation Consultancy (JCI, NABH, NABL, ISO 9001)</li><li>Developing SOPs, Policies, Tariffs, etc.</li><li>Hospital Management Information System Consulting</li><li>Intellectual Property Rights</li><li>HRD &amp; Training, Manpower Planning, Selection &amp; Recruitment</li></ul></div>"
+    title: "HEALTHCARE INFRASTRUCTURE CONSULTING",
+    content: "<p>The Indian Healthcare Sector has become highly competitive and in order to keep pace with the ever changing environment, Innergize has developed a strong strategy and management practice and an experienced team to shoulder challenging projects and operations of its clients in the healthcare arena. We provide dedicated healthcare advisory services from strategy to implementation.</p><p>We support our clients to focus and redefine their healthcare strategy to achieve enhanced quality and economically viable operations. We understand their needs and provide answers with tailored approach through a combination of strategic, operational and financial skills.</p><p>The Healthcare Infrastructure Consulting is headed by healthcare management professionals with decades of Hospital and Health Care industry experience. The team’s forte lies in hospital and healthcare projects, wherein they bring their matured experience, right from conceptualization, designing, commissioning to making it a commercial success.</p><ul class='dot-blue dot-grey list-unstyled'><li>Greenfield Projects</li><li>Tendering and Project Management Support</li><li>Commissioning Support</li><li>Upgradation and Modernization</li><li>Architectural and Structural Design</li><li>Strategic, Financial and Business Consulting Services</li><li>Transaction Support and Due Diligence Services</li><li>Execution Support Services</li><li>Accreditation Consultancy (JCI, NABH, NABL, ISO 9001)</li><li>Developing SOPs, Policies, Tariffs, etc.</li><li>Hospital Management Information System Consulting</li><li>Intellectual Property Rights</li><li>•	Human Resources, Training, Manpower Planning, Selection and Recruitment</li></ul></div>"
   }];
 })
 
@@ -78,38 +78,84 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   $scope.template = TemplateService.changecontent("clients");
   $scope.menutitle = NavigationService.makeactive("Clients");
   TemplateService.title = $scope.menutitle;
-  $scope.clients=[];
+  $scope.clients = [];
   $scope.navigation = NavigationService.getnav();
   $scope.client = [{
-    img: "img/clients/c1.jpg"
+    img: "img/clients/c1.jpg",
+    name: "Bharat Serums and Vaccines"
+  }, {
+    img: "img/clients/c2.jpg",
+    name: "Siro Clinpharm"
 
   }, {
-    img: "img/clients/c2.jpg"
+    img: "img/clients/c3.jpg",
+    name: "Bhilai Engineering Corporation"
 
   }, {
-    img: "img/clients/c3.jpg"
+    img: "img/clients/c4.jpg",
+    name: "Ar-Ex Laboratories"
 
   }, {
-    img: "img/clients/c4.jpg"
+    img: "img/clients/c5.jpg",
+    name: "BioXera Pharma"
 
   }, {
-    img: "img/clients/c5.jpg"
+    img: "img/clients/c10.jpg",
+    name: "Rodium Realty"
 
   }, {
-    img: "img/clients/c6.jpg"
+    img: "img/clients/c18.jpg",
+    name: "Lubrikote Specialities"
 
   }, {
-    img: "img/clients/c7.jpg"
+    img: "img/clients/c12.jpg",
+    name: "Shakti Insulated Wires"
 
   }, {
-    img: "img/clients/c8.jpg"
+    img: "img/clients/c6.jpg",
+    name: "HLE Engineers"
+
+  }, {
+    img: "img/clients/c16.jpg",
+    name: "Yashashvi Rasayan"
+
+  }, {
+    img: "img/clients/c15.jpg",
+    name: "Urban Science"
+
+  }, {
+    img: "img/clients/c9.jpg",
+    name: "Simitri 	Group International"
+
+  }, {
+    img: "img/clients/c11.jpg",
+    name: "Salt Health Solutions "
+
+  }, {
+    img: "img/clients/c8.jpg",
+    name: "Harris Pye Engineering "
+
+  }, {
+    img: "img/clients/c13.jpg",
+    name: "Sportsmed Mumbai"
+
+  }, {
+    img: "img/clients/c17.jpg",
+    name: "Aura Art"
+
+  }, {
+    img: "img/clients/c7.jpg",
+    name: "H.N. Indigos"
+  }, {
+    img: "img/clients/c14.jpg",
+    name: "S&T Group"
 
   }];
 
-    $scope.client = _.chunk($scope.client, 6);
-    _.each($scope.client,function (key) {
-      $scope.clients.push(_.chunk(key,3))
-    })
+  $scope.client = _.chunk($scope.client, 8);
+  _.each($scope.client, function(key) {
+    $scope.clients.push(_.chunk(key, 4))
+  })
 })
 
 .controller('DownloadsCtrl', function($scope, TemplateService, NavigationService, $timeout) {

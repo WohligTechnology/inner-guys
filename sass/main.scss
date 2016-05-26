@@ -201,7 +201,7 @@ p {
   top: 0;
   left: 0;
   background-color: white;
-  z-index: 4;
+  z-index: 99;
 }
 .menu {
   width: 270px;
@@ -354,7 +354,7 @@ p {
 .clients {
   li {
     display: inline-block;
-    width: 33%;
+    width: 49%;
     margin: 10px 0;
     // &:before {
     //   content: "\f111";
@@ -500,6 +500,9 @@ textarea {
   padding: 50px;
   background: #fff;
   margin-bottom: 20px;
+  p {
+    margin: 0;
+  }
 }
 .bg-grey {
   background: #ebebeb;
@@ -644,6 +647,80 @@ textarea {
 }
 .cont-affilliates p {
   text-align: justify;
+}
+.clients {
+  ol.flex-control-nav.flex-control-paging {
+    display: none;
+  }
+  .flex-direction-nav {
+    display: block;
+  }
+  .flexslider {
+    background: transparent;
+    border-color: transparent;
+    margin-bottom: 15px;
+    &:hover {
+      .flex-direction-nav {
+        .flex-prev {
+          left: -0px;
+        }
+        .flex-next {
+          right: -0px;
+        }
+      }
+    }
+  }
+  .flex-direction-nav {
+    .flex-prev {
+      left: -0px;
+    }
+    .flex-next {
+      right: -0px;
+    }
+    a {
+      opacity: 1;
+      width: 50px;
+      height: 80px;
+      &.flex-prev:before {
+        content: url('../img/clients/back.png');
+      }
+      &.flex-next:before {
+        content: url('../img/clients/next.png');
+      }
+    }
+  }
+}
+.client-logo {
+  position: relative;
+  margin-bottom: 10px;
+  cursor: pointer;
+  &:hover {
+    .hover-content {
+      opacity: 1;
+    }
+  }
+  .hover-content {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    opacity: 0;
+    @include transition(all ease 300ms);
+  }
+  .hover-content p {
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include transform(translate(-50%,-50%));
+    line-height: 100%;
+  }
 }
 /*footer ends*/
 /* Start writing sass here */

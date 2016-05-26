@@ -12,17 +12,24 @@
         </div>
       </div>
     </div> -->
-    <div class="flex-slider">
+    <div class="flex-slider clients">
       <flex-slider flex-slide="data in clients track by $index" animation="slide" animation-loop="false" as-nav-for="#sliders" slideshow="false">
         <li class="">
           <div class="wallpaper">
             <div class="row mb30" ng-repeat="row in data">
-              <div class="col-xs-4 plr10" ng-repeat="images in row">
-                <div class="client-logo">
-                  <img ng-src="{{images.img}}" class="img-responsive">
+              <div class="row">
+                <div class="col-md-offset-1 col-md-10">
+                  <div class="col-sm-3 col-xs-6 plr10" ng-repeat="images in row">
+                    <div class="client-logo">
+                      <img ng-src="{{images.img}}" class="img-responsive">
+                      <div class="hover-content">
+                        <p>{{images.name}}</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="clearfix"></div>
                 </div>
               </div>
-              <div class="clearfix"></div>
             </div>
           </div>
         </li>
