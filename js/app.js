@@ -48,11 +48,11 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
   })
 
 
-  .state('downloads', {
-    url: "/downloads",
-    templateUrl: "views/template.html",
-    controller: 'DownloadsCtrl'
-  })
+  // .state('downloads', {
+  //   url: "/downloads",
+  //   templateUrl: "views/template.html",
+  //   controller: 'DownloadsCtrl'
+  // })
 
   .state('contact-us', {
     url: "/contact-us",
@@ -185,6 +185,16 @@ firstapp.directive('uploadImage', function($http) {
     };
 });
 
+firstapp.directive('imageonload', function() {
+    return {
+        restrict: 'A',
+        link: function(scope, element, attrs) {
+            element.bind('load', function() {
+                scope.$apply(attrs.imageonload);
+            });
+        }
+    };
+});
 
 firstapp.config(function($translateProvider) {
   $translateProvider.translations('en', LanguageEnglish);

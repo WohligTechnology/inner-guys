@@ -3,9 +3,11 @@
 // } else {
 //   adminURL = "http://localhost/demo/index.php";
 // }
-
-var adminURL = "http://wohlig.co.in/innergizebackend/index.php/";
-var imgurl = "http://wohlig.co.in/innergizebackend/uploads/";
+var baseUrl = "http://wohlig.co.in/innergizebackend/"
+// var baseUrl = "http://192.168.1.137/innergizebackend/"
+var adminURL = baseUrl + "index.php/json/";
+var imgurl = baseUrl + "uploads/";
+var uploadurl = adminURL + "uploadImage";
 
 var navigationservice = angular.module('navigationservice', [])
 
@@ -35,12 +37,14 @@ var navigationservice = angular.module('navigationservice', [])
     classis: "active",
     anchor: "clients",
     subnav: []
-  }, {
-    name: "Downloads",
-    classis: "active",
-    anchor: "downloads",
-    subnav: []
-  }, {
+  }
+  // , {
+  //   name: "Downloads",
+  //   classis: "active",
+  //   anchor: "downloads",
+  //   subnav: []
+  // }
+  , {
     name: "Contact Us",
     classis: "active",
     anchor: "contact-us",

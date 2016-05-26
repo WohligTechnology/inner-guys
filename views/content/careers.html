@@ -4,14 +4,24 @@
       <h1>CARRERS</h1>
     </div>
   </div>
-  <div class="bck-color">
+  <div class="container pt50 pb50">
+    <div class="cont-careers">
+      <div class="row">
+        <div class="col-md-offset-2 col-md-8">
+          <p>Cliched as it may sound; the energizing element at Innergize is its people. Here a team of individuals from diverse backgrounds and varied interests work towards a common professional goal.At Innergize we believe that the smile of satisfaction
+            of a good day's work done is the first step in the ladder to career growth. If you would like to be part of this highly Innergizing Team, you may send your resume by filling the adjacent form.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bck-colors philosophy-box uppercase">
     <div class="container pt50 pb50">
       <div class="row">
         <div class="col-md-12">
         </div>
       </div>
       <div class="text-center pt30">
-        <h1 class="font-weight300 color-white">Application Form</h1>
+        <h1 class="font-weight400 font-didot color-white">Application Form</h1>
       </div>
       <div class="row pt30 appfrom">
         <div class="col-md-offset-2 col-md-8">
@@ -56,9 +66,10 @@
             </div>
             <div class="col-md-12">
               <div class="">
-                <upload-image ng-model="form.image" no-view></upload-image>
+                <upload-image ng-model="formData.resume" ng-callback="changeit"></upload-image>
               </div>
             </div>
+            {{formData.resume}}
             <div class="row pb30">
               <div class="col-md-12">
                 <div class="submit-btn float-right">

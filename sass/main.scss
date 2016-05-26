@@ -24,6 +24,9 @@ $top-height: 81px;
     }
   }
 }
+p {
+  color: #313131;
+}
 @font-face {
   font-family: "Didot";
   src: url("../fonts/didot.ttf");
@@ -123,7 +126,7 @@ a {
   background-attachment: fixed;
 }
 .carrers-banners {
-  background: url("../img/contact/contact.jpg") center center no-repeat;
+  background: url("../img/careers/careers.jpg") center center no-repeat;
   background-size: cover;
   background-attachment: fixed;
 }
@@ -139,6 +142,9 @@ a {
 .pb50 {
   padding-bottom: 50px;
 }
+.mb20 {
+  margin-bottom: 20px;
+}
 .head-font {
   text-align: center;
   width: 100%;
@@ -148,8 +154,11 @@ a {
   }
 }
 .bck-color {
-  background: #a3a3a3;
+  background: #c8c8c8;
   position: relative;
+}
+p {
+  line-height: 160%;
 }
 .overview-box {
   @include position(absolute, 50% null null 50%);
@@ -157,13 +166,14 @@ a {
   width: 60%;
   height: 300px;
   overflow: auto;
+  padding: 0 10px;
 }
 .up-side {
   @include position(absolute, 50% null null 50%);
   @include transform (translatex(-50%) translatey(-50%));
   h1 {
     font-size: 68px;
-    color: #CACACA;
+    color: #ebebeb;
     font-family: 'didot';
     padding-top: 100px;
   }
@@ -203,6 +213,15 @@ a {
   background-color: rgba(123,129,133,0.75);
   overflow-y: auto;
   .navigation {
+    li {
+      &:hover,
+      &.active {
+        a {
+          border-left: 3px solid #fff;
+          background-color: #646a6c;
+        }
+      }
+    }
     .fb {
       a:hover {
         background-color: $facebook;
@@ -227,10 +246,6 @@ a {
       font-weight: 700;
       text-transform: uppercase;
       border-left: 3px solid transparent;
-      &:hover {
-        border-left: 3px solid #fff;
-        background-color: #646a6c;
-      }
     }
   }
 }
@@ -354,6 +369,10 @@ a {
 .bold {
   font-weight: 600;
 }
+.color-blue {
+  color: #0095da;
+  font-weight: 700;
+}
 .dot-blue {
   li {
     &:before {
@@ -365,6 +384,11 @@ a {
       margin-right: 10px;
     }
   }
+  &.dot-grey {
+    li:before {
+      color: #a5a9ab;
+    }
+  }
 }
 .getintouch {
   .form-control {
@@ -374,6 +398,9 @@ a {
     box-shadow: inset 0 0 0 rgba(0, 0, 0, 0.075);
     border-bottom: 1px solid #D6D6D6;
   }
+}
+.bck-colors {
+  background: #a3a3a3;
 }
 .color-white {
   color: #fff;
@@ -429,9 +456,9 @@ a {
     }
   }
 }
-.font-weight300,
+.font-weight400,
 .title h5 {
-  font-weight: 300;
+  font-weight: 400;
 }
 .font-weight500 {
   font-weight: 500;
@@ -442,20 +469,26 @@ textarea {
 .submit-btn {
   text-align: right;
   .submit {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
     color: #5f5f5f;
+    text-transform: capitalize !important;
     &:hover {
       color: #5f5f5f;
       text-decoration: none;
     }
   }
 }
+.create-btn {
+  span {
+    text-transform: capitalize !important;
+  }
+}
 .contact {
   font-weight: 300;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   p {
-    line-height: 120%;
+    line-height: 150%;
     margin-bottom: 0;
     font-size: 16px;
   }
@@ -501,7 +534,7 @@ textarea {
         h4 {
           font-size: 16px;
           margin: 0;
-          padding: 0.3em 5px;
+          padding: 0.4em 5px;
           i {
             color: #979797;
           }
@@ -515,9 +548,30 @@ textarea {
   .panel-group .panel + .panel {
     margin-top: 0;
   }
+  ul li {
+    line-height: 200%;
+  }
+  .panel-body {
+    color: #5f5f5f;
+    p,
+    li,
+    a {
+      color: #5f5f5f;
+    }
+  }
 }
-.philosophy-box h5 {
-  text-transform: uppercase;
+.philosophy-box {
+  h1 {
+    margin-bottom: 20px;
+  }
+  h5 {
+    text-transform: uppercase;
+  }
+  .philosophy-cont {
+    padding-top: 20px;
+    height: 300px;
+    overflow: auto;
+  }
 }
 .error-msg {
   color: #FF3030;
@@ -567,6 +621,29 @@ textarea {
 }
 .submit-over {
   height: 150px;
+}
+/* Let's get this party started */
+ ::-webkit-scrollbar {
+  width: 8px;
+}
+/* Track */
+ ::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+/* Handle */
+ ::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.8);
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+::-webkit-scrollbar-thumb:window-inactive {
+  background: rgba(255,255,255,0.4);
+}
+.cont-affilliates p {
+  text-align: justify;
 }
 /*footer ends*/
 /* Start writing sass here */
