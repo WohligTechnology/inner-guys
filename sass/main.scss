@@ -725,6 +725,15 @@ textarea {
     line-height: 100%;
   }
 }
+.img-box {
+  width: 200px;
+  height: 150px;
+  overflow: hidden;
+  margin-bottom: 10px;
+  img {
+    width: 100%;
+  }
+}
 /*footer ends*/
 /* Start writing sass here */
 @import "fancybox-override";

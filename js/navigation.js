@@ -3,11 +3,11 @@
 // } else {
 //   adminURL = "http://localhost/demo/index.php";
 // }
-var baseUrl = "http://wohlig.co.in/innergizebackend/"
-// var baseUrl = "http://192.168.1.137/innergizebackend/"
+var baseUrl = "http://wohlig.co.in/innergizebackend/";
+// var baseUrl = "http://192.168.1.137/innergizebackend/";
 var adminURL = baseUrl + "index.php/json/";
 var imgurl = baseUrl + "uploads/";
-var uploadurl = adminURL + "uploadImage";
+var uploadurl = adminURL + "imageUpload";
 
 var navigationservice = angular.module('navigationservice', [])
 
@@ -58,7 +58,7 @@ var navigationservice = angular.module('navigationservice', [])
     submitContact: function(formData, callback) {
       console.log(formData);
       $http({
-        url: adminURL + 'json/contactSubmit',
+        url: adminURL + 'contactSubmit',
         method: 'POST',
         withCredentials: true,
         data: formData
@@ -66,12 +66,7 @@ var navigationservice = angular.module('navigationservice', [])
     },
     submitCareers: function(formData, callback) {
       console.log(formData);
-      $http({
-        url: adminURL + 'json/careersSubmit',
-        method: 'POST',
-        withCredentials: true,
-        data: formData
-      }).success(callback);
+      $http.post( adminURL + 'careersSubmit',formData ).success(callback);
     },
     // submitContact: function(formData, callback) {
     //   console.log(formData);

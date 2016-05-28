@@ -224,6 +224,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
   $scope.changeit = function(data) {
     console.log(data);
+    $scope.formData.resume = data.data[0];
   }
 })
 
