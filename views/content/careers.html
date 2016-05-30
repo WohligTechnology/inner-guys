@@ -68,25 +68,29 @@
             </div>
             <div class="row pb30">
               <div class="col-md-12">
-                <div class="mainimg-upload">
-                  <p>{{formData.resume}}</p>
-                  <upload-image ng-model="formData.resume" ng-callback="changeit" no-view></upload-image>
-                </div>
-              </div>
-              </div>
-              <div class="row pb30">
-                <div class="col-md-12">
-                  <div class="submit-btn float-right">
-                    <a href="" class="submit" ng-class="{'disabled' : !careerForm.$valid }" ng-click="submitCareersForm(careerForm,formData)">Submit</a>
+                <div class="block">
+                  <div class="mainimg-upload inlineblock">
+                    <upload-image ng-model="formData.resume" ng-callback="changeit" no-view></upload-image>
+                  </div>
+                  <div class="inlineblock pl10">
+                    <p class="color-white">{{formData.resume}}</p>
                   </div>
                 </div>
               </div>
+            </div>
+            <div class="row pb30">
+              <div class="col-md-12">
+                <div class="submit-btn float-right">
+                  <a href="" class="submit" ng-class="{'disabled' : !careerForm.$valid }" ng-click="submitCareersForm(careerForm,formData)">Submit</a>
+                </div>
+              </div>
+            </div>
           </form>
           <div class="submit-over" ng-show="thankyouact">
             <h2>Thank You!!</h2>
           </div>
-          </div>
         </div>
       </div>
     </div>
+  </div>
 </section>

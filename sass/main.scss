@@ -587,6 +587,7 @@ textarea {
   color: #000;
   font-size: 40px;
   font-weight: 700;
+  margin: 0;
 }
 .rl {
   position: relative;
@@ -733,6 +734,15 @@ textarea {
   img {
     width: 100%;
   }
+}
+.block{
+  display: block;
+  .inlineblock {
+      display: inline-block;
+  }
+}
+.pl10{
+  padding-left: 10px;
 }
 /*footer ends*/
 /* Start writing sass here */
