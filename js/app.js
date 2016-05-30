@@ -154,6 +154,8 @@ firstapp.directive('uploadImage', function($http) {
                 $scope.model = [];
             };
             $scope.upload = function(image) {
+              console.log(image);
+              console.log("File");
                 var Template = this;
                 image.hide = true;
                 var formData = new FormData();
@@ -189,9 +191,10 @@ firstapp.directive('imageonload', function() {
     return {
         restrict: 'A',
         link: function(scope, element, attrs) {
-            element.bind('load', function() {
-                scope.$apply(attrs.imageonload);
-            });
+          console.log("Loading should start now",attrs.imageonload);
+          setTimeout(function() {
+            scope.$apply(attrs.imageonload);
+          } , 500);
         }
     };
 });
