@@ -9,20 +9,20 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
   $scope.mySlides = [{
     image: 'img/slides/slide1.jpg',
-    title: 'Brigding the gap. Positively',
-    text: 'Innergize solutions private limited is a statergy and management consultancy firm that provides a broad spectrum of services across diverse clientele that ranges from private corporations to financial institutions and even  high-net-worthy individuals.',
+    title: 'Bridging the gap. Positively',
+    text: 'Innergize Solutions Private Limited is a strategy and management consultancy firm that provides a broad spectrum of services across diverse clientele that ranges from private corporations to financial institutions and even  high net worthy individuals.',
     pagelink: 'about-us',
     pagename: 'About Us'
   }, {
     image: 'img/slides/slide1.jpg',
-    title: 'Brigding the gap. Positively',
-    text: 'Innergize solutions private limited is a statergy and management consultancy firm that provides a broad spectrum of services across diverse clientele that ranges from private corporations to financial institutions and even  high-net-worthy individuals.',
+    title: 'Bridging the gap. Positively',
+    text: 'Innergize Solutions Private Limited is a strategy and management consultancy firm that provides a broad spectrum of services across diverse clientele that ranges from private corporations to financial institutions and even  high net worthy individuals.',
     pagelink: 'about-us',
     pagename: 'About Us'
   }, {
     image: 'img/slides/slide1.jpg',
-    title: 'Brigding the gap. Positively',
-    text: 'Innergize solutions private limited is a statergy and management consultancy firm that provides a broad spectrum of services across diverse clientele that ranges from private corporations to financial institutions and even  high-net-worthy individuals.',
+    title: 'Bridging the gap. Positively',
+    text: 'Innergize Solutions Private Limited is a strategy and management consultancy firm that provides a broad spectrum of services across diverse clientele that ranges from private corporations to financial institutions and even  high net worthy individuals.',
     pagelink: 'about-us',
     pagename: 'About Us'
   }];

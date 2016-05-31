@@ -163,10 +163,13 @@ p {
 .overview-box {
   @include position(absolute, 50% null null 50%);
   @include transform (translatex(-50%) translatey(-50%));
-  width: 60%;
-  height: 300px;
+  width: 80%;
+  height: 550px;
   overflow: auto;
   padding: 0 10px;
+  p{
+    text-align: justify;
+  }
 }
 .up-side {
   @include position(absolute, 50% null null 50%);
@@ -494,7 +497,7 @@ textarea {
   }
 }
 .services-box-white {
-  margin-top: -80px;
+  margin-top: 30px;
   position: relative;
   z-index: 1;
   padding: 50px;
@@ -572,8 +575,6 @@ textarea {
   }
   .philosophy-cont {
     padding-top: 20px;
-    height: 300px;
-    overflow: auto;
   }
 }
 .error-msg {
