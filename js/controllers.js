@@ -28,7 +28,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   }];
 
   angular.element(document).ready(function() {
-    $scope.autoHeight = $(document).height() - 120;
+    $scope.autoHeight = $(window).height() - 120;
   });
 })
 
