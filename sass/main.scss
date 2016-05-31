@@ -288,6 +288,7 @@ p {
 .hamburger {
   margin: 10px 0 0;
   .navbar-toggle {
+    padding: 9px 0px 9px 10px;
     display: inline-block;
     background-color: transparent!important;
     margin: 0;
@@ -519,7 +520,7 @@ textarea {
     .panel-body {
       padding-left: 0;
       background-color: #ebebeb;
-      padding: 20px;
+      padding: 5px 10px;
     }
     .panel-default {
       border: 0;
