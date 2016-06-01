@@ -18,76 +18,74 @@
   </div>
   <div class="bck-colors philosophy-box uppercase">
     <div class="container pt50 pb50">
-      <div class="row">
-        <div class="col-md-12">
+      <div class="" ng-hide="thankyouact">
+        <div class="text-center pt30">
+          <h2 class="font-weight400 font-didot color-white">Application Form</h2>
         </div>
-      </div>
-      <div class="text-center pt30">
-        <h1 class="font-weight400 font-didot color-white">Application Form</h1>
-      </div>
-      <div class="row pt30 appfrom">
-        <div class="col-md-offset-2 col-md-8">
-          <form action="" name="careerForm" ng-hide="thankyouact">
-            <div class="row">
-              <div class="col-md-6">
-                <div class="form-group getintouch">
-                  <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Name*" name="name" ng-model="formData.name" required>
-                  <div class="error-msg" ng-show="careerForm.name.$error.required && careerForm.name.$touched">Please Enter Your Name.</div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="form-group getintouch">
-                  <input type="text" class="form-control" id="exampleInputEmail1" ng-model="formData.department" placeholder="Department">
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-6">
-                <div class="form-group getintouch">
-                  <input type="email" class="form-control" id="exampleInputEmail1" ng-model="formData.email" placeholder="Email*" name="email" ng-model="formData.email" required>
-                  <div class="error-msg" ng-show="careerForm.email.$error.required && careerForm.email.$touched">Please Enter Your Email.</div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="form-group getintouch">
-                  <input type="tel" class="form-control" id="exampleInputEmail1" ng-model="formData.phone" placeholder="Phone" required>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-6">
-                <div class="form-group getintouch">
-                  <input type="text" class="form-control" id="exampleInputEmail1" ng-model="formData.position" placeholder="Position">
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="form-group getintouch">
-                  <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Qualification" ng-model="formData.qualification">
-                </div>
-              </div>
-            </div>
-            <div class="row pb30">
-              <div class="col-md-12">
-                <div class="block">
-                  <div class="mainimg-upload inlineblock">
-                    <upload-image ng-model="formData.resume" ng-callback="changeit" no-view></upload-image>
+        <div class="row pt30 appfrom">
+          <div class="col-md-offset-2 col-md-8">
+            <form action="" name="careerForm">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group getintouch">
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Name*" name="name" ng-model="formData.name" required>
+                    <div class="error-msg" ng-show="careerForm.name.$error.required && careerForm.name.$touched">Please Enter Your Name.</div>
                   </div>
-                  <div class="inlineblock pl10">
-                    <p class="color-white">{{formData.resume}}</p>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group getintouch">
+                    <input type="text" class="form-control" id="exampleInputEmail1" ng-model="formData.department" placeholder="Department">
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="row pb30">
-              <div class="col-md-12">
-                <div class="submit-btn float-right">
-                  <a href="" class="submit" ng-class="{'disabled' : !careerForm.$valid }" ng-click="submitCareersForm(careerForm,formData)">Submit</a>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group getintouch">
+                    <input type="email" class="form-control" id="exampleInputEmail1" ng-model="formData.email" placeholder="Email*" name="email" ng-model="formData.email" required>
+                    <div class="error-msg" ng-show="careerForm.email.$error.required && careerForm.email.$touched">Please Enter Your Email.</div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group getintouch">
+                    <input type="tel" class="form-control" id="exampleInputEmail1" ng-model="formData.phone" placeholder="Phone" required>
+                  </div>
                 </div>
               </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group getintouch">
+                    <input type="text" class="form-control" id="exampleInputEmail1" ng-model="formData.position" placeholder="Position">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group getintouch">
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Qualification" ng-model="formData.qualification">
+                  </div>
+                </div>
+              </div>
+              <div class="row pb30">
+                <div class="col-md-12">
+                  <div class="block">
+                    <div class="mainimg-upload inlineblock">
+                      <upload-image ng-model="formData.resume" ng-callback="changeit" no-view></upload-image>
+                    </div>
+                    <div class="inlineblock pl10">
+                      <p class="color-white">{{formData.resume}}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row pb30">
+                <div class="col-md-12">
+                  <div class="submit-btn float-right">
+                    <a href="" class="submit" ng-class="{'disabled' : !careerForm.$valid }" ng-click="submitCareersForm(careerForm,formData)">Submit</a>
+                  </div>
+                </div>
+              </div>
+            </form>
+            <div class="submit-over" ng-show="thankyouact">
+              <h2>Thank You!!</h2>
             </div>
-          </form>
-          <div class="submit-over" ng-show="thankyouact">
-            <h2>Thank You!!</h2>
           </div>
         </div>
       </div>

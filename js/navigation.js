@@ -13,43 +13,44 @@ var navigationservice = angular.module('navigationservice', [])
 
 .factory('NavigationService', function($http) {
   var navigation = [{
-    name: "About Us",
-    classis: "active",
-    anchor: "about-us",
-    subnav: []
-  }, {
-    name: "Services",
-    classis: "active",
-    anchor: "services",
-    subnav: []
-  }, {
-    name: "Affiliates",
-    classis: "active",
-    anchor: "affiliates",
-    subnav: []
-  }, {
-    name: "Careers",
-    classis: "active",
-    anchor: "careers",
-    subnav: []
-  }, {
-    name: "Clients",
-    classis: "active",
-    anchor: "clients",
-    subnav: []
-  }
-  // , {
-  //   name: "Downloads",
-  //   classis: "active",
-  //   anchor: "downloads",
-  //   subnav: []
-  // }
-  , {
-    name: "Contact Us",
-    classis: "active",
-    anchor: "contact-us",
-    subnav: []
-  }];
+      name: "About Us",
+      classis: "active",
+      anchor: "about-us",
+      subnav: []
+    }, {
+      name: "Services",
+      classis: "active",
+      anchor: "services",
+      subnav: []
+    }, {
+      name: "Affiliates",
+      classis: "active",
+      anchor: "affiliates",
+      subnav: []
+    }, {
+      name: "Clients",
+      classis: "active",
+      anchor: "clients",
+      subnav: []
+    }, {
+      name: "Careers",
+      classis: "active",
+      anchor: "careers",
+      subnav: []
+    }
+    // , {
+    //   name: "Downloads",
+    //   classis: "active",
+    //   anchor: "downloads",
+    //   subnav: []
+    // }
+    , {
+      name: "Contact Us",
+      classis: "active",
+      anchor: "contact-us",
+      subnav: []
+    }
+  ];
 
   return {
     getnav: function() {
@@ -66,7 +67,7 @@ var navigationservice = angular.module('navigationservice', [])
     },
     submitCareers: function(formData, callback) {
       console.log(formData);
-      $http.post( adminURL + 'careersSubmit',formData ).success(callback);
+      $http.post(adminURL + 'careersSubmit', formData).success(callback);
     },
     // submitContact: function(formData, callback) {
     //   console.log(formData);
