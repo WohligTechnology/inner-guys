@@ -194,8 +194,8 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
   $scope.client = _.chunk($scope.client, 8);
   _.each($scope.client, function(key) {
-    $scope.clients.push(_.chunk(key, 4))
-  })
+    $scope.clients.push(_.chunk(key, 4));
+  });
 
   var navigationUrl = function (event) {
            if (event.ctrlKey) {

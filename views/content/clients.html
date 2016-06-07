@@ -1,43 +1,41 @@
 <section>
-  <div class="banner client-banners" auto-height>
-    <div class="head-font">
-      <h1>CLIENTS</h1>
+    <div class="banner client-banners" auto-height>
+        <div class="head-font">
+            <h1>CLIENTS</h1>
+        </div>
     </div>
-  </div>
-  <div class="container pt50 pb50">
-    <!-- <div class="row">
+    <div class="container pt50 pb50">
+        <!-- <div class="row">
       <div class="col-md-3 col-sm-4 col-xs-6" ng-repeat="data in client track by $index">
         <div class="client-logo">
           <img ng-src="{{data.img}}" class="img-responsive">
         </div>
       </div>
     </div> -->
-    <div class="flex-slider clients">
-      <flex-slider flex-slide="data in clients track by $index" animation="slide" animation-loop="false" as-nav-for="#sliders" slideshow="false">
-        <li class="">
-          <div class="wallpaper">
-            <div class="row mb30" ng-repeat="row in data">
-              <div class="row">
-                <div class="col-md-offset-1 col-md-10">
-                  <div class="col-sm-3 col-xs-6 plr10" ng-repeat="data in row">
-                    <a href="http://innergize.in/#about_us">
-                    <!-- <a ng-href="{{data.link}}" target="_blank"> -->
-                      <div class="client-logo">
-                        <img ng-src="{{data.img}}" class="img-responsive" alt="{{data.name}}">
-                        <div class="hover-content">
-                          <p>{{data.name}}</p>
+        <div class="flex-slider clients">
+            <flex-slider flex-slide="data in clients track by $index" animation="slide" animation-loop="false" slideshow="false">
+            <li class="">
+                <div class="wallpaper">
+                    <div class="row mb30" ng-repeat="row in data">
+                        <div class="row">
+                            <div class="col-md-offset-1 col-md-10">
+                                <div class="col-sm-3 col-xs-6 plr10" ng-repeat="data in row">
+                                    <div class="client-logo">
+                                        <img ng-src="{{data.img}}" class="img-responsive" alt="{{data.name}}">
+                                        <a ng-href="{{data.link}}" target="_blank">
+                                            <div class="hover-content">
+                                                <p>{{data.name}}</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
                         </div>
-                      </div>
-                    </a>
-                    <!-- </a> -->
-                  </div>
-                  <div class="clearfix"></div>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </li>
-      </flex-slider>
+            </li>
+        </flex-slider>
     </div>
-  </div>
+</div>
 </section>
