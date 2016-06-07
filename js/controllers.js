@@ -14,17 +14,11 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     pagelink: 'about-us',
     pagename: 'About Us'
   }, {
-    image: 'img/slides/slide1.jpg',
-    title: 'Bridging the gap. Positively',
-    text: 'Innergize Solutions Private Limited is a strategy and management consultancy firm that provides a broad spectrum of services across diverse clientele that ranges from private corporations to financial institutions and even  high net worthy individuals.',
-    pagelink: 'about-us',
-    pagename: 'About Us'
-  }, {
-    image: 'img/slides/slide1.jpg',
-    title: 'Bridging the gap. Positively',
-    text: 'Innergize Solutions Private Limited is a strategy and management consultancy firm that provides a broad spectrum of services across diverse clientele that ranges from private corporations to financial institutions and even  high net worthy individuals.',
-    pagelink: 'about-us',
-    pagename: 'About Us'
+    image: 'img/services/services.jpg',
+    // title: 'Services',
+    text: 'Innergize offers a comprehensive range of strategic, advisory and execution services that are customized to the grass root reality of the customer’s business environment to harness sustainable, competence and process driven results. Our functional area experts and affiliates ensure that your business is operating at optimal levels.',
+    pagelink: 'services',
+    pagename: 'services'
   }];
 
   angular.element(document).ready(function() {
@@ -82,80 +76,134 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   $scope.navigation = NavigationService.getnav();
   $scope.client = [{
     img: "img/clients/c1.jpg",
-    name: "Bharat Serums and Vaccines"
+    name: "Bharat Serums and Vaccines",
+    link: "https://www.bharatserums.com/"
   }, {
     img: "img/clients/c2.jpg",
-    name: "Siro Clinpharm"
+    name: "Siro Clinpharm",
+    link: "http://www.siroclinpharm.com/"
 
   }, {
     img: "img/clients/c3.jpg",
-    name: "Bhilai Engineering Corporation"
+    name: "Bhilai Engineering Corporation",
+    link: "http://bec-group.com/",
 
   }, {
     img: "img/clients/c4.jpg",
-    name: "Ar-Ex Laboratories"
+    name: "Ar-Ex Laboratories",
+    link: "http://www.arexlab.com/",
 
   }, {
     img: "img/clients/c5.jpg",
-    name: "BioXera Pharma"
+    name: "BioXera Pharma",
+    link: "http://www.bioxerapharma.com/",
 
   }, {
     img: "img/clients/c10.jpg",
-    name: "Rodium Realty"
+    name: "Rodium Realty",
+    link: "http://www.rodium.net/",
 
   }, {
     img: "img/clients/c18.jpg",
-    name: "Lubrikote Specialities"
+    name: "Lubrikote Specialities",
+    link: "http://www.lubrikote.com/",
 
   }, {
     img: "img/clients/c12.jpg",
-    name: "Shakti Insulated Wires"
+    name: "Shakti Insulated Wires",
+    link: "http://www.shaktins.com/",
 
   }, {
     img: "img/clients/c6.jpg",
-    name: "HLE Engineers"
+    name: "HLE Engineers",
+    link: "http://www.hlengineers.com/",
 
   }, {
     img: "img/clients/c16.jpg",
-    name: "Yashashvi Rasayan"
+    name: "Yashashvi Rasayan",
+    link: "http://www.yashrasayan.com/Yashashvi-Rasayan-Pvt-Ltd.html",
 
   }, {
     img: "img/clients/c15.jpg",
-    name: "Urban Science"
+    name: "Urban Science",
+    link: "http://www.urbanscience.com/",
 
   }, {
     img: "img/clients/c9.jpg",
-    name: "Simitri 	Group International"
+    name: "Simitri 	Group International",
+    link: "http://www.simitrigroup.com/",
 
   }, {
     img: "img/clients/c11.jpg",
-    name: "Salt Health Solutions "
-
+    name: "Salt Health Solutions ",
+    link: "https://www.facebook.com/SALT-Health-Solutions-INDIA-1512796098963358/",
   }, {
     img: "img/clients/c8.jpg",
-    name: "Harris Pye Engineering "
+    name: "Harris Pye Engineering ",
+    link: "http://www.harrispye.com/",
 
   }, {
     img: "img/clients/c13.jpg",
-    name: "Sportsmed Mumbai"
+    name: "Sportsmed Mumbai",
+    link: "http://www.sportsmed.in/",
 
   }, {
     img: "img/clients/c17.jpg",
-    name: "Aura Art"
+    name: "Aura Art",
+    link: "http://www.auraart.in/#/home",
 
   }, {
     img: "img/clients/c7.jpg",
-    name: "H.N. Indigos"
+    name: "H.N. Indigos",
+    link: "http://www.hnindigos.com/",
   }, {
     img: "img/clients/c14.jpg",
-    name: "S&T Group"
+    name: "S&T Group",
+    link: "http://s-tgroup.com/",
 
+  }, {
+    img: "img/clients/c19.jpg",
+    name: "Zenith Tins",
+    link: "http://www.zenithtins.com/",
+
+  }, {
+    img: "img/clients/c20.jpg",
+    name: "Morpheus Lifesciences",
+    link: "http://www.morpheusivf.com/",
+
+  }, {
+    img: "img/clients/c21.jpg",
+    name: "Amy Billimoria House of Design",
+    link: "http://amybillimoria.com/",
+
+  }, {
+    img: "img/clients/c22.jpg",
+    name: "ASUTOSH Hospital",
+    link: "http://www.asutoshindia.com/",
+
+  }, {
+    img: "img/clients/c23.jpg",
+    name: "Kasiak Research",
+    link: "http://www.kasiakresearch.com/",
+
+  }, {
+    img: "img/clients/c24.jpg",
+    name: "Savani Transport",
+    link: "http://www.savani-india.com/branchnet.asp",
   }];
 
   $scope.client = _.chunk($scope.client, 8);
   _.each($scope.client, function(key) {
     $scope.clients.push(_.chunk(key, 4))
   })
+
+  var navigationUrl = function (event) {
+           if (event.ctrlKey) {
+               window.open(client, '_blank'); // in new tab
+           } else {
+               $location.path(url); // in same tab
+           }
+       };
 })
 
 .controller('DownloadsCtrl', function($scope, TemplateService, NavigationService, $timeout) {

@@ -12,6 +12,16 @@
       <div class="col-md-5 col-sm-6">
         <div class="contact">
           <h4 class="font-weight400">Corporate Address:</h4>
+          <p>A2, A Wing, Barodawala Mansion, </p>
+          <p>81, Dr. Annie Besant Road,</p>
+          <p> Worli, Mumbai 400018, India.</p>
+        </div>
+        <div class="contact">
+          <p>Tel : <a href="tel:+912266621393">+91 22 6662 1393</a></p>
+          <p>Fax : +91 22 6662 1395 </p>
+        </div>
+        <div class="contact">
+          <h4 class="font-weight400">Office Address:</h4>
           <p>D4, B Wing, Barodawala Mansion, </p>
           <p>81, Dr. Annie Besant Road,</p>
           <p> Worli, Mumbai 400018, India.</p>
@@ -21,32 +31,21 @@
           <p>Fax : +91 22 6635 0665 </p>
           <p>E-mail : <a href="mailto:info@innergize.in">info@innergize.in</a></p>
         </div>
-        <div class="contact">
-          <h4 class="font-weight400">Corporate Address:</h4>
-          <p>A2, A Wing, Barodawala Mansion, </p>
-          <p>81, Dr. Annie Besant Road,</p>
-          <p> Worli, Mumbai 400018, India.</p>
-        </div>
-        <div class="contact">
-          <p>Tel : <a href="tel:+912266621393">+91 22 6662 1393</a></p>
-          <p>Fax : +91 22 6662 1395 </p>
-        </div>
       </div>
       <div class="col-md-7 col-sm-6">
         <div class="map mt60">
-          <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1258.9310425439885!2d72.81532528497077!3d18.99631631735917!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7ce8578cda835%3A0x8cd2d5c016a21756!2sInnergize+Solutions+Private+Limited!5e0!3m2!1sen!2sin!4v1464087181317" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe> -->
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1258.9310425439885!2d72.81532528497077!3d18.99631631735917!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7ce8578cda835%3A0x8cd2d5c016a21756!2sInnergize+Solutions+Private+Limited!5e0!3m2!1sen!2sin!4v1464087181317"
             width="100%" height="360" frameborder="0" style="border:0" allowfullscreen></iframe>
         </div>
       </div>
     </div>
-    <div class="pt50 rl philosophy-box">
+    <div class="pt50 rl philosophy-box" ng-hide="thankyouact">
       <div class="text-center pt30">
         <h2 class="font-weight400 font-didot mb20">GET IN TOUCH</h2>
       </div>
       <div class="row pt30">
         <div class="col-md-offset-2 col-md-8">
-          <form name="contactForm" ng-hide="thankyouact">
+          <form name="contactForm">
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group getintouch">
@@ -140,10 +139,15 @@
               </div>
             </div>
           </form>
-          <div class="submit-over" ng-show="thankyouact">
-            <h2>Thank You!!</h2>
-          </div>
         </div>
+      </div>
+    </div>
+    <div class="submit-over" ng-show="thankyouact">
+      <div class="middle-place text-center">
+        <h2>Thank You!!</h2>
+        <h4>
+          Will get back to you as soon as possible.
+        </h4>
       </div>
     </div>
   </div>

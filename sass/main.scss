@@ -135,9 +135,13 @@ a {
   background-size: cover;
   background-attachment: fixed;
   position: relative;
+  background-position: 0 -30px;
 }
 .pt50 {
   padding-top: 50px;
+}
+.pt80 {
+  padding-top: 80px;
 }
 .pb50 {
   padding-bottom: 50px;
@@ -589,16 +593,6 @@ textarea {
 .error-msg {
   color: #FF3030;
 }
-.submit-over h2 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  color: #000;
-  font-size: 40px;
-  font-weight: 700;
-  margin: 0;
-}
 .rl {
   position: relative;
 }
@@ -634,7 +628,20 @@ textarea {
   }
 }
 .submit-over {
-  height: 150px;
+  height: 350px;
+  position: relative;
+  .middle-place {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #000;
+    h2 {
+      font-size: 36px;
+      font-weight: 700;
+      margin-top: 0;
+    }
+  }
 }
 .overview-box,
 .philosophy-cont {
@@ -771,7 +778,7 @@ textarea {
   .circle {
     display: inline-block;
     cursor: pointer;
-}
+  }
   // .circle {
   //   cursor: pointer;
   //   color: #5f5f5f;
@@ -791,6 +798,36 @@ textarea {
   //   }
 }
 /*footer ends*/
+.wallpaper {
+  a {
+    display: block;
+  }
+}
+.bounce {
+  @include animation(bounce 2s infinite);
+  cursor: pointer;
+}
+@include keyframes(bounce) {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    @include transform(translateY(0));
+  }
+  40% {
+    @include transform(translateY(-15px));
+  }
+  60% {
+    @include transform(translateY(-7px));
+  }
+}
+.social-down {
+  position: fixed;
+  bottom: 90px;
+  width: 100%;
+  text-align: center;
+}
 /* Start writing sass here */
 @import "fancybox-override";
 @import "mobile";

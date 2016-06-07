@@ -19,13 +19,17 @@
             <div class="row mb30" ng-repeat="row in data">
               <div class="row">
                 <div class="col-md-offset-1 col-md-10">
-                  <div class="col-sm-3 col-xs-6 plr10" ng-repeat="images in row">
-                    <div class="client-logo">
-                      <img ng-src="{{images.img}}" class="img-responsive">
-                      <div class="hover-content">
-                        <p>{{images.name}}</p>
+                  <div class="col-sm-3 col-xs-6 plr10" ng-repeat="data in row">
+                    <a href="http://innergize.in/#about_us">
+                    <!-- <a ng-href="{{data.link}}" target="_blank"> -->
+                      <div class="client-logo">
+                        <img ng-src="{{data.img}}" class="img-responsive" alt="{{data.name}}">
+                        <div class="hover-content">
+                          <p>{{data.name}}</p>
+                        </div>
                       </div>
-                    </div>
+                    </a>
+                    <!-- </a> -->
                   </div>
                   <div class="clearfix"></div>
                 </div>

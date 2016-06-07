@@ -16,9 +16,16 @@
       text-align: center;
     }
   }
+  .icon-scroll .circle img {
+    width: 36px;
+  }
+  .philosophy-box h1,
   .head-font h1 {
     padding-top: 0;
     font-size: 36px;
+  }
+  .philosophy-box h2 {
+    font-size: 30px;
   }
   .row-flex.display-block-mobile {
     display: block;

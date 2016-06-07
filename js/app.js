@@ -220,7 +220,7 @@ firstapp.directive('autoHeight', function($compile, $parse) {
     link: function($scope, element, attrs) {
       var $element = $(element);
       var windowHeight = $(window).height();
-      var newheight = windowHeight - 300;
+      var newheight = windowHeight - 250;
       var addHeight = function() {
         $element.css("min-height", newheight);
       };
@@ -237,16 +237,27 @@ firstapp.directive('scrolldown', function($compile, $parse) {
       var $element = $(element);
       // var windowHeight = $(window).height();
       $scope.scrollDown = function() {
-          $('html,body').animate({
-              scrollTop: $(".second").offset().top
-            },
-            'slow');
-        }
-        // var newheight = windowHeight - 300;
-        // var addHeight = function() {
-        //     $element.css("min-height", newheight);
-        // };
-        // addHeight();
+        $('html,body').animate({
+            scrollTop: $(".second").offset().top
+          },
+          'slow');
+      }
+    }
+  };
+});
+firstapp.directive('scrolldown1', function($compile, $parse) {
+  return {
+    restrict: 'EA',
+    replace: false,
+    link: function($scope, element, attrs) {
+      var $element = $(element);
+      // var windowHeight = $(window).height();
+      $scope.scrollDown1 = function() {
+        $('html,body').animate({
+            scrollTop: $(".second1").offset().top
+          },
+          'slow');
+      }
     }
   };
 });
