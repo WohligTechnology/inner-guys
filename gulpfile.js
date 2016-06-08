@@ -88,7 +88,7 @@ gulp.task('ftp', function() {
     var decryptedJSON = JSON.parse(decrypted.toString(CryptoJS.enc.Utf8));
 
     decryptedJSON.log = gutil.log;
-    decryptedJSON.parallel = 1;
+    decryptedJSON.parallel = 3;
     var conn = ftp.create(decryptedJSON);
 
 
@@ -103,7 +103,7 @@ gulp.task('ftp', function() {
             base: './production',
             buffer: false
         })
-        .pipe(conn.newer('/public_html/' + uploadingFolder)) // only upload newer files
+        // .pipe(conn.newer('/public_html/' + uploadingFolder)) // only upload newer files
         .pipe(conn.dest('/public_html/' + uploadingFolder));
 
 });
