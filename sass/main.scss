@@ -735,7 +735,7 @@ textarea {
   }
   .hover-content p {
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 400;
     color: #fff;
     position: absolute;
     top: 50%;
@@ -827,6 +827,12 @@ textarea {
   position: fixed;
   bottom: 90px;
   width: 100%;
+  text-align: center;
+}
+.pos-btm {
+  position: absolute;
+  width: 100%;
+  bottom: 20px;
   text-align: center;
 }
 /* Start writing sass here */

@@ -14,7 +14,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     pagelink: 'about-us',
     pagename: 'About Us'
   }, {
-    image: 'img/services/services.jpg',
+    image: 'img/slides/slide2.jpg',
     // title: 'Services',
     text: 'Innergize offers a comprehensive range of strategic, advisory and execution services that are customized to the grass root reality of the customer’s business environment to harness sustainable, competence and process driven results. Our functional area experts and affiliates ensure that your business is operating at optimal levels.',
     pagelink: 'services',
