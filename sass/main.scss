@@ -131,11 +131,11 @@ a {
   background-attachment: fixed;
 }
 .services-banners {
-  background: url("../img/services/services.jpg") center center no-repeat;
+  background: url("../img/slides/slide4.jpg") center center no-repeat;
   background-size: cover;
   background-attachment: fixed;
   position: relative;
-  background-position: 0 -30px;
+  // background-position: 0 -30px;
 }
 .pt50 {
   padding-top: 50px;
@@ -810,6 +810,9 @@ textarea {
 .bounce {
   @include animation(bounce 2s infinite);
   cursor: pointer;
+  .circle{
+    display: block;
+  }
 }
 @include keyframes(bounce) {
   0%,

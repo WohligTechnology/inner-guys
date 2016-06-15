@@ -10,7 +10,6 @@ var firstapp = angular.module('firstapp', [
 firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $locationProvider) {
   // for http request with session
   $httpProvider.defaults.withCredentials = true;
-
   $stateProvider
     .state('home', {
       url: "/",
@@ -221,7 +220,7 @@ firstapp.directive('autoHeight', function($compile, $parse) {
     link: function($scope, element, attrs) {
       var $element = $(element);
       var windowHeight = $(window).height();
-      var newheight = windowHeight - 250;
+      var newheight = windowHeight - 300;
       var addHeight = function() {
         $element.css("min-height", newheight);
       };
@@ -246,6 +245,7 @@ firstapp.directive('scrolldown', function($compile, $parse) {
     }
   };
 });
+
 firstapp.directive('scrolldown1', function($compile, $parse) {
   return {
     restrict: 'EA',

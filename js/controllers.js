@@ -8,13 +8,13 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   $scope.navigation = NavigationService.getnav();
 
   $scope.mySlides = [{
-    image: 'img/about/about.jpg',
+    image: 'img/slides/slide1.jpg',
     title: 'Bridging the gap. Positively',
     text: 'Innergize Solutions Private Limited is a strategy and management consultancy firm that provides a broad spectrum of services across diverse clientele that ranges from private corporations to financial institutions and even  high net worthy individuals.',
     pagelink: 'about-us',
     pagename: 'About Us'
   }, {
-    image: 'img/slides/slide4.jpg',
+    image: 'img/about/about.jpg',
     // title: 'Services',
     text: 'Innergize offers a comprehensive range of strategic, advisory and execution services that are customized to the grass root reality of the customer’s business environment to harness sustainable, competence and process driven results. Our functional area experts and affiliates ensure that your business is operating at optimal levels.',
     pagelink: 'services',
