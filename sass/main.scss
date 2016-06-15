@@ -296,7 +296,7 @@ p {
 .hamburger {
   margin: 10px 0 0;
   .navbar-toggle {
-    padding: 9px 0 9px 10px;
+    padding: 9px 9px 9px 10px;
     display: inline-block;
     background-color: transparent!important;
     margin: 0;
@@ -812,6 +812,10 @@ textarea {
   cursor: pointer;
   .circle{
     display: block;
+    @include transition(all ease 500ms);
+    &:hover{
+      opacity: 0.6;
+    }
   }
 }
 @include keyframes(bounce) {

@@ -35,7 +35,7 @@
     @include transform(translate(0));
     width: 100%;
     padding: 20px;
-    margin: 20px 0;
+    // margin: 20px 0;
   }
   .services-list .panel-group .panel-default .panel-heading h4 {
     font-size: 14px;
@@ -49,6 +49,12 @@
   }
   .clients .flex-direction-nav a {
     transform: scale(0.6);
+  }
+  .pt70 {
+    padding-top: 70px;
+  }
+  .circle img {
+    width: 40px;
   }
 }
 @media (max-width: 480px) {
