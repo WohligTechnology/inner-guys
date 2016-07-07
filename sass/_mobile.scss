@@ -4,8 +4,34 @@
       width: 100%;
     }
   }
+  .download {
+    ul li {
+      .nav-link .pd20 {
+        padding: 10px;
+        font-size: 12px;
+      }
+    }
+    .ul-download {
+      li {
+        width: 50%;
+      }
+    }
+  }
 }
 @media (max-width: $screen-xs-max) {
+  .download {
+    .ul-download {
+      li {
+        width: 100%;
+      }
+    }
+    .pl60 {
+      padding-left: 20px;
+    }
+    .nav-tabs {
+      padding: 0;
+    }
+  }
   .menu {
     width: 100%;
     background-color: rgba(123, 129, 133, 0.90);

@@ -130,6 +130,11 @@ a {
   background-size: cover;
   background-attachment: fixed;
 }
+.download-banners {
+  background: url("../img/download/download.jpg") center center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
 .services-banners {
   background: url("../img/slides/slide4.jpg") center center no-repeat;
   background-size: cover;
@@ -139,6 +144,9 @@ a {
 }
 .pt50 {
   padding-top: 50px;
+}
+.pd20 {
+  padding: 20px;
 }
 .pt80 {
   padding-top: 80px;
@@ -499,7 +507,7 @@ textarea {
 .contact {
   font-weight: 300;
   margin-bottom: 10px;
-  h4{
+  h4 {
     margin: 15px 0 5px;
   }
   p {
@@ -810,10 +818,10 @@ textarea {
 .bounce {
   @include animation(bounce 2s infinite);
   cursor: pointer;
-  .circle{
+  .circle {
     display: block;
     @include transition(all ease 500ms);
-    &:hover{
+    &:hover {
       opacity: 0.6;
     }
   }
@@ -845,13 +853,68 @@ textarea {
   bottom: 20px;
   text-align: center;
 }
-.dark-overlay{
+.dark-overlay {
   position: absolute;
   top: 0;
   right: 0;
   left: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 0.35);
+}
+.download {
+  .tab-pane .bg-grey {
+    min-height: 250px;
+  }
+  .nav-tabs {
+    padding: 0 50px;
+  }
+  .pl60 {
+    padding-left: 60px;
+  }
+  ul {
+    li {
+      &.active .nav-link {
+        border-top: 3px solid #47b8f0!important;
+      }
+      .nav-link {
+        padding: 0;
+        border-radius: 0;
+        border: 0px!important;
+        border-top: 3px solid transparent!important;
+        &:hover {
+          border-top: 3px solid #47b8f0!important;
+        }
+      }
+    }
+  }
+  .ul-download {
+    li {
+      margin-bottom: 10px;
+      cursor: pointer;
+      @include transition(all ease 300ms);
+      width: 33%;
+      color: #5f5f5f;
+      &:hover {
+        color: darken(#777, 60%);
+      }
+    }
+  }
+}
+.modal-download {
+  button.close {
+    background: #000!important;
+    color: #fff;
+    text-shadow: none;
+    border-radius: 50%;
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    opacity: 1;
+    padding: 1px 5px;
+  }
+  .close {
+    font-size: 20px;
+  }
 }
 /* Start writing sass here */
 @import "fancybox-override";

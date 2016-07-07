@@ -197,21 +197,44 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.clients.push(_.chunk(key, 4));
   });
 
-  var navigationUrl = function (event) {
-           if (event.ctrlKey) {
-               window.open(client, '_blank'); // in new tab
-           } else {
-               $location.path(url); // in same tab
-           }
-       };
+  var navigationUrl = function(event) {
+    if (event.ctrlKey) {
+      window.open(client, '_blank'); // in new tab
+    } else {
+      $location.path(url); // in same tab
+    }
+  };
 })
 
-.controller('DownloadsCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+.controller('DownloadsCtrl', function($scope, TemplateService, NavigationService, $timeout, $uibModal) {
   //Used to name the .html file
   $scope.template = TemplateService.changecontent("downloads");
   $scope.menutitle = NavigationService.makeactive("Downloads");
   TemplateService.title = $scope.menutitle;
   $scope.navigation = NavigationService.getnav();
+  $scope.open = function(size) {
+
+    // var modalInstance = $uibModal.open({
+    //   animation: $scope.animationsEnabled,
+    //   templateUrl: 'views/content/modal-download.html',
+    //   controller: 'DownloadsCtrl',
+    //   size: size,
+    //   resolve: {
+    //     items: function() {
+    //       return $scope.items;
+    //     }
+    //   }
+    // });
+    $uibModal.open({
+      templateUrl: 'views/content/modal-download.html',
+      controller: 'DownloadsCtrl',
+    });
+  }
+
+  // $scope.close = function() {
+  //   $uibModalInstance.dismiss('cancel');
+  // };
+
 })
 
 .controller('ContactCtrl', function($scope, TemplateService, NavigationService, $timeout) {
