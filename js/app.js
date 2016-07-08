@@ -246,6 +246,29 @@ firstapp.directive('scrolldown', function($compile, $parse) {
   };
 });
 
+firstapp.filter('uploadpath', function($sce) {
+  return function(input, width, height, style) {
+    if (input && input.indexOf(".pdf") != -1) {
+      return $sce.trustAsResourceUrl(imgurl + input);
+    }
+    var other = "";
+    if (width && width !== "") {
+      other += "&width=" + width;
+    }
+    if (height && height !== "") {
+      other += "&height=" + height;
+    }
+    if (style && style !== "") {
+      other += "&style=" + style;
+    }
+    if (input) {
+      console.log('input', input);
+      return imgurl + input + other;
+      console.log('imgurl + input + other', imgurl + input + other);
+    }
+  };
+});
+
 firstapp.directive('scrolldown1', function($compile, $parse) {
   return {
     restrict: 'EA',

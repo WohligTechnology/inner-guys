@@ -207,133 +207,148 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 })
 
 .controller('DownloadsCtrl', function($scope, TemplateService, NavigationService, $timeout, $uibModal) {
-  //Used to name the .html file
-  $scope.template = TemplateService.changecontent("downloads");
-  $scope.menutitle = NavigationService.makeactive("Downloads");
-  TemplateService.title = $scope.menutitle;
-  $scope.navigation = NavigationService.getnav();
-  $scope.open = function(size) {
+    //Used to name the .html file
+    $scope.template = TemplateService.changecontent("downloads");
+    $scope.menutitle = NavigationService.makeactive("Downloads");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getnav();
+    $scope.open = function(pdf) {
+        $scope.modalPdf = pdf.pdf;
 
-    // var modalInstance = $uibModal.open({
-    //   animation: $scope.animationsEnabled,
-    //   templateUrl: 'views/content/modal-download.html',
-    //   controller: 'DownloadsCtrl',
-    //   size: size,
-    //   resolve: {
-    //     items: function() {
-    //       return $scope.items;
-    //     }
-    //   }
-    // });
-    $uibModal.open({
-      templateUrl: 'views/content/modal-download.html',
-      controller: 'DownloadsCtrl',
+        $uibModal.open({
+            templateUrl: 'views/content/modal-download.html',
+            controller: 'DownloadsCtrl',
+            scope: $scope
+        });
+    }
+
+    // $scope.close = function() {
+    //   $uibModalInstance.dismiss('cancel');
+    // };
+
+    NavigationService.getCategoryData(function(data) {
+
+        $scope.Categories = data;
+
+        console.log('111', $scope.Categories);
+
     });
-  }
+    var id = '1';
+    $scope.OnclickId = function(id) {
 
-  // $scope.close = function() {
-  //   $uibModalInstance.dismiss('cancel');
-  // };
+        NavigationService.getCategoryId(id, function(data) {
+
+            $scope.CategoriesWithId = data;
+            // $scope.CategoriesWithpdf = data.pdf;
+
+            console.log('CategoriesWithId', $scope.CategoriesWithId);
+
+        });
+    }
+    $scope.OnclickId(id);
+
+
+
+
 
 })
+          .controller('ContactCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+            //Used to name the .html file
+            $scope.template = TemplateService.changecontent("contact-us");
+            $scope.menutitle = NavigationService.makeactive("Contact Us");
+            TemplateService.title = $scope.menutitle;
+            $scope.navigation = NavigationService.getnav();
+            $scope.formData = {};
+            $scope.formData.enquiryarr = [];
 
-.controller('ContactCtrl', function($scope, TemplateService, NavigationService, $timeout) {
-  //Used to name the .html file
-  $scope.template = TemplateService.changecontent("contact-us");
-  $scope.menutitle = NavigationService.makeactive("Contact Us");
-  TemplateService.title = $scope.menutitle;
-  $scope.navigation = NavigationService.getnav();
-  $scope.formData = {};
-  $scope.formData.enquiryarr = [];
+            $scope.submitContactForm = function(formValid) {
+              $scope.formData.enquiry = "";
+              if (formValid.$valid && $scope.formData) {
+                if ($scope.formData.enquiryarr.length > 0) {
+                  _.each($scope.formData.enquiryarr, function(n) {
+                    $scope.formData.enquiry += n + ",";
+                  })
+                  $scope.formData.enquiry = $scope.formData.enquiry.substring(0, $scope.formData.enquiry.length - 1);
+                }
+                $scope.formData.services = $scope.formData.enquiryarr.toString();
+                NavigationService.submitContact($scope.formData, function(data) {
+                  console.log(data);
+                  if (data.value != false) {
+                    $scope.thankyouact = true;
+                  }
+                });
+              }
+            };
 
-  $scope.submitContactForm = function(formValid) {
-    $scope.formData.enquiry = "";
-    if (formValid.$valid && $scope.formData) {
-      if ($scope.formData.enquiryarr.length > 0) {
-        _.each($scope.formData.enquiryarr, function(n) {
-          $scope.formData.enquiry += n + ",";
-        })
-        $scope.formData.enquiry = $scope.formData.enquiry.substring(0, $scope.formData.enquiry.length - 1);
-      }
-      $scope.formData.services = $scope.formData.enquiryarr.toString();
-      NavigationService.submitContact($scope.formData, function(data) {
-        console.log(data);
-        if (data.value != false) {
-          $scope.thankyouact = true;
-        }
-      });
-    }
-  };
+            $scope.pushorpop = function(val) {
+              var foundIndex = $scope.formData.enquiryarr.indexOf(val);
+              if (foundIndex == -1) {
+                $scope.formData.enquiryarr.push(val);
+              } else {
+                $scope.formData.enquiryarr.splice(foundIndex, 1);
+              }
+            }
+          })
 
-  $scope.pushorpop = function(val) {
-    var foundIndex = $scope.formData.enquiryarr.indexOf(val);
-    if (foundIndex == -1) {
-      $scope.formData.enquiryarr.push(val);
-    } else {
-      $scope.formData.enquiryarr.splice(foundIndex, 1);
-    }
-  }
-})
+          .controller('CareersCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+            //Used to name the .html file
+            $scope.template = TemplateService.changecontent("careers");
+            $scope.menutitle = NavigationService.makeactive("Careers");
+            TemplateService.title = $scope.menutitle;
+            $scope.navigation = NavigationService.getnav();
+            $scope.formData = {};
+            $scope.submitCareersForm = function(formValid) {
+              if (formValid.$valid && $scope.formData) {
+                NavigationService.submitCareers($scope.formData, function(data) {
+                  console.log(data);
+                  if (data.value != false) {
+                    $scope.thankyouact = true;
+                  }
+                });
+              }
+            };
 
-.controller('CareersCtrl', function($scope, TemplateService, NavigationService, $timeout) {
-  //Used to name the .html file
-  $scope.template = TemplateService.changecontent("careers");
-  $scope.menutitle = NavigationService.makeactive("Careers");
-  TemplateService.title = $scope.menutitle;
-  $scope.navigation = NavigationService.getnav();
-  $scope.formData = {};
-  $scope.submitCareersForm = function(formValid) {
-    if (formValid.$valid && $scope.formData) {
-      NavigationService.submitCareers($scope.formData, function(data) {
-        console.log(data);
-        if (data.value != false) {
-          $scope.thankyouact = true;
-        }
-      });
-    }
-  };
+            $scope.changeit = function(data) {
+              console.log(data);
+              $scope.formData.resume = data.data[0];
+            }
+          })
 
-  $scope.changeit = function(data) {
-    console.log(data);
-    $scope.formData.resume = data.data[0];
-  }
-})
+          .controller('headerctrl', function($scope, TemplateService) {
+            $scope.template = TemplateService;
+            $scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
+              $(window).scrollTop(0);
+            });
+            $scope.showBar = "";
+            $scope.showMenu = "menu-in";
+            $scope.getMenu = function() {
+              if ($scope.showMenu == "menu-out") {
+                $scope.showMenu = "menu-in";
+                $scope.showBar = "";
+              } else {
+                $scope.showMenu = "menu-out";
+                $scope.showBar = "cross-bar";
+              }
+            };
+          })
 
-.controller('headerctrl', function($scope, TemplateService) {
-  $scope.template = TemplateService;
-  $scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
-    $(window).scrollTop(0);
-  });
-  $scope.showBar = "";
-  $scope.showMenu = "menu-in";
-  $scope.getMenu = function() {
-    if ($scope.showMenu == "menu-out") {
-      $scope.showMenu = "menu-in";
-      $scope.showBar = "";
-    } else {
-      $scope.showMenu = "menu-out";
-      $scope.showBar = "cross-bar";
-    }
-  };
-})
+          .controller('languageCtrl', function($scope, TemplateService, $translate, $rootScope) {
 
-.controller('languageCtrl', function($scope, TemplateService, $translate, $rootScope) {
+            $scope.changeLanguage = function() {
+              console.log("Language CLicked");
 
-  $scope.changeLanguage = function() {
-    console.log("Language CLicked");
-
-    if (!$.jStorage.get("language")) {
-      $translate.use("hi");
-      $.jStorage.set("language", "hi");
-    } else {
-      if ($.jStorage.get("language") == "en") {
-        $translate.use("hi");
-        $.jStorage.set("language", "hi");
-      } else {
-        $translate.use("en");
-        $.jStorage.set("language", "en");
-      }
-    }
-    //  $rootScope.$apply();
-  };
-});
+              if (!$.jStorage.get("language")) {
+                $translate.use("hi");
+                $.jStorage.set("language", "hi");
+              } else {
+                if ($.jStorage.get("language") == "en") {
+                  $translate.use("hi");
+                  $.jStorage.set("language", "hi");
+                } else {
+                  $translate.use("en");
+                  $.jStorage.set("language", "en");
+                }
+              }
+              //  $rootScope.$apply();
+            };
+          });

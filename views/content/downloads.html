@@ -1,29 +1,29 @@
 <section>
-  <div class="banner services-banners" auto-height>
-    <div class="dark-overlay"></div>
-    <div class="head-font">
-      <h1>Downloads</h1>
+    <div class="banner services-banners" auto-height>
+        <div class="dark-overlay"></div>
+        <div class="head-font">
+            <h1>Downloads</h1>
+        </div>
     </div>
-  </div>
-  <div class="pt50 pb50">
-    <div class="pd-side download pb50">
-      <uib-tabset active="active">
-        <uib-tab>
-          <uib-tab-heading>
-            <div class="bg-grey pd20 bold">E-BROCHURES</div>
-          </uib-tab-heading>
-          <div class="bg-grey pd20 pl60">
-            <ul class="list-unstyled list-inline ul-download dot-blue dot-grey">
-              <li ng-click="open('lg')">Innergize Corporate E-Brochure</li>
-              <li ng-click="open('lg')">Foreign Business Setup in India</li>
+    <div class="pt50 pb50">
+        <div class="pd-side download pb50">
+            <uib-tabset active="active">
+                <uib-tab ng-repeat="data in Categories" ng-click="OnclickId(data.id)">
+                    <uib-tab-heading>
+                        <div class="bg-grey pd20 bold">{{data.name}}</div>
+                    </uib-tab-heading>
+                    <div class="bg-grey pd20 pl60">
+                        <ul class="list-unstyled list-inline ul-download dot-blue dot-grey">
+                            <li ng-repeat="catid in CategoriesWithId" ng-click="open(catid);">{{catid.name}}</li>
+                            <!-- <li ng-click="open('lg')">Foreign Business Setup in India</li>
               <li ng-click="open('lg')">Innergize Healthcare Infra Consulting</li>
-              <li ng-click="open('lg')">Compliance Practice</li>
-            </ul>
-          </div>
-        </uib-tab>
-        <uib-tab>
+              <li ng-click="open('lg')">Compliance Practice</li> -->
+                        </ul>
+                    </div>
+                </uib-tab>
+                <!-- <uib-tab>
           <uib-tab-heading>
-            <div class="bg-grey pd20 bold">DEVELOPMENTS IN CORPORATE LAWS</div>
+            <div class="bg-grey pd20 bold">{{data.name}}</div>
           </uib-tab-heading>
           <div class="bg-grey pd20 pl60">
             <h5 class="bold">Niti - Newsletters on Developments in Corporate Laws</h5>
@@ -37,7 +37,7 @@
         </uib-tab>
         <uib-tab>
           <uib-tab-heading>
-            <div class="bg-grey pd20 bold">DEVELOPMENTS IN TAX LAWS</div>
+            <div class="bg-grey pd20 bold">{{data.name}}</div>
           </uib-tab-heading>
           <div class="bg-grey pd20 pl60">
             <h5 class="bold">Niti - Newsletters on Developments in Tax Laws</h5>
@@ -48,7 +48,7 @@
         </uib-tab>
         <uib-tab>
           <uib-tab-heading>
-            <div class="bg-grey pd20 bold">BUDGET HIGHLIGHTS</div>
+            <div class="bg-grey pd20 bold">{{data.name}}</div>
           </uib-tab-heading>
           <div class="bg-grey pd20 pl60">
             <h5 class="bold">Niti - Highlights of Budget</h5>
@@ -56,8 +56,8 @@
               <li ng-click="open('lg')">Budget 2016 </li>
             </ul>
           </div>
-        </uib-tab>
-      </uib-tabset>
+        </uib-tab> -->
+            </uib-tabset>
+        </div>
     </div>
-  </div>
 </section>

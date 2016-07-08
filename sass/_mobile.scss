@@ -20,6 +20,9 @@
 }
 @media (max-width: $screen-xs-max) {
   .download {
+    .nav-tabs > li {
+      float: none;
+    }
     .ul-download {
       li {
         width: 100%;

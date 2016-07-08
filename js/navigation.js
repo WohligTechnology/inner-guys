@@ -4,7 +4,8 @@
 //   adminURL = "http://localhost/demo/index.php";
 // }
 var baseUrl = "http://wohlig.co.in/innergizebackend/";
-// var baseUrl = "http://192.168.1.137/innergizebackend/";
+// var baseUrl = "http://192.168.0.118/innergizebackend/";
+// var baseUrl = "http://suksha.com/innergizebackend/";
 var adminURL = baseUrl + "index.php/json/";
 var imgurl = baseUrl + "uploads/";
 var uploadurl = adminURL + "imageUpload";
@@ -69,6 +70,16 @@ var navigationservice = angular.module('navigationservice', [])
       console.log(formData);
       $http.post(adminURL + 'careersSubmit', formData).success(callback);
     },
+
+
+    getCategoryData: function(callback) {
+         $http.get(adminURL + 'getCategory').success(callback);
+     },
+
+     getCategoryId: function(id, callback) {
+           $http.get(adminURL + 'getCategory?category=' + id).success(callback);
+       },
+
     // submitContact: function(formData, callback) {
     //   console.log(formData);
     //   $http({
