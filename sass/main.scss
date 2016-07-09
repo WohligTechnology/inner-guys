@@ -869,20 +869,28 @@ textarea {
     padding: 0 50px;
   }
   .pl60 {
-    padding-left: 60px;
+    padding-left: 80px;
   }
   ul {
     li {
-      &.active .nav-link {
-        border-top: 3px solid #47b8f0!important;
+      &.active {
+        border-right: 1px solid #ddd;
+        border-left: 1px solid #ddd;
+        .nav-link {
+          border-top: 3px solid #47b8f0!important;
+          @extend .bg-grey;
+        }
       }
       .nav-link {
         padding: 0;
         border-radius: 0;
+        margin: 0;
         border: 0px!important;
         border-top: 3px solid transparent!important;
         &:hover {
           border-top: 3px solid #47b8f0!important;
+          border-right: 1px solid #ddd;
+          border-left: 1px solid #ddd;
         }
       }
     }
