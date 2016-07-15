@@ -94,4 +94,31 @@
     width: 49%;
     margin: 5px 0;
   }
+  .about-image img {
+    height: 70px;
+  }
+  .about {
+    margin-top: 40px;
+  }
+  .home .about .about-description p {
+    font-size: 10px;
+  }
+  .home .about h2 {
+    font-size: 40px;
+  }
+  .all-slider .flexslider .flex-direction-nav .flex-prev {
+    bottom: -55px;
+  }
+  .all-slider .flex-direction-nav a {
+    bottom: -55px;
+  }
+  .head-text h2 {
+    margin: 10px 0 -12px;
+    font-size: 46px;
+    letter-spacing: 6px;
+  }
+  .link-made a,
+  .link-made li {
+    display: block;
+  }
 }
