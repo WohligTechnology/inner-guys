@@ -39,12 +39,13 @@ var navigationservice = angular.module('navigationservice', [])
       anchor: "careers",
       subnav: []
     }
-    , {
-      name: "Downloads",
-      classis: "active",
-      anchor: "downloads",
-      subnav: []
-    }
+    // , 
+    // {
+    //   name: "Downloads",
+    //   classis: "active",
+    //   anchor: "downloads",
+    //   subnav: []
+    // }
     , {
       name: "Contact Us",
       classis: "active",
@@ -73,12 +74,12 @@ var navigationservice = angular.module('navigationservice', [])
 
 
     getCategoryData: function(callback) {
-         $http.get(adminURL + 'getCategory').success(callback);
-     },
+      $http.get(adminURL + 'getCategory').success(callback);
+    },
 
-     getCategoryId: function(id, callback) {
-           $http.get(adminURL + 'getCategory?category=' + id).success(callback);
-       },
+    getCategoryId: function(id, callback) {
+      $http.get(adminURL + 'getCategory?category=' + id).success(callback);
+    },
 
     // submitContact: function(formData, callback) {
     //   console.log(formData);
