@@ -58,6 +58,12 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
     url: "/contact-us",
     templateUrl: "views/template.html",
     controller: 'ContactCtrl'
+  })
+
+  .state('disclaimer', {
+    url: "/disclaimer",
+    templateUrl: "views/template.html",
+    controller: 'DisclaimerCtrl'
   });
 
 
