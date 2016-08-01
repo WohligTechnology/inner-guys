@@ -9,7 +9,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
   $scope.mySlides = [{
     image: 'img/slides/slide1.jpg',
-    title: 'Bridging the gap. Positively',
+    title: 'Bridging the gap. Positively.',
     text: 'Innergize Solutions Private Limited is a strategy and management consultancy firm that provides a broad spectrum of services across diverse clientele that ranges from private corporations to financial institutions and even  high net worthy individuals.',
     pagelink: 'about-us',
     pagename: 'About Us'

@@ -66,6 +66,13 @@
     padding: 20px;
     // margin: 20px 0;
   }
+  .footer-text {
+    text-align: center !important;
+  }
+  .clients li {
+    display: block;
+    width: 100%;
+  }
   .services-list .panel-group .panel-default .panel-heading h4 {
     font-size: 14px;
     i {
@@ -88,7 +95,6 @@
 }
 @media (max-width: 480px) {
   .dot-blue li:before {
-    margin-right: 8px;
   }
   .clients li {
     width: 49%;

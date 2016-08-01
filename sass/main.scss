@@ -472,13 +472,16 @@ p {
 
 .dot-blue {
   li {
+    position: relative;
+    padding-left: 15px;
     &:before {
       content: "\f04b";
       font-family: FontAwesome;
       color: #989898;
       font-size: 10px;
-      vertical-align: middle;
-      margin-right: 10px;
+      position: absolute;
+      top: 0;
+      left: 0;
     }
   }
 
@@ -603,7 +606,6 @@ textarea {
 }
 
 .contact {
-  font-weight: 300;
   margin-bottom: 10px;
 
   h4 {
