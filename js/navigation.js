@@ -14,45 +14,41 @@ var navigationservice = angular.module('navigationservice', [])
 
 .factory('NavigationService', function($http) {
   var navigation = [{
-      name: "About Us",
-      classis: "active",
-      anchor: "about-us",
-      subnav: []
-    }, {
-      name: "Services",
-      classis: "active",
-      anchor: "services",
-      subnav: []
-    }, {
-      name: "Affiliates",
-      classis: "active",
-      anchor: "affiliates",
-      subnav: []
-    }, {
-      name: "Clients",
-      classis: "active",
-      anchor: "clients",
-      subnav: []
-    }, {
-      name: "Careers",
-      classis: "active",
-      anchor: "careers",
-      subnav: []
-    }
-    // , 
-    // {
-    //   name: "Downloads",
-    //   classis: "active",
-    //   anchor: "downloads",
-    //   subnav: []
-    // }
-    , {
-      name: "Contact Us",
-      classis: "active",
-      anchor: "contact-us",
-      subnav: []
-    }
-  ];
+    name: "About Us",
+    classis: "active",
+    anchor: "about-us",
+    subnav: []
+  }, {
+    name: "Services",
+    classis: "active",
+    anchor: "services",
+    subnav: []
+  }, {
+    name: "Affiliates",
+    classis: "active",
+    anchor: "affiliates",
+    subnav: []
+  }, {
+    name: "Clients",
+    classis: "active",
+    anchor: "clients",
+    subnav: []
+  }, {
+    name: "Careers",
+    classis: "active",
+    anchor: "careers",
+    subnav: []
+  }, {
+    name: "Downloads",
+    classis: "active",
+    anchor: "downloads",
+    subnav: []
+  }, {
+    name: "Contact Us",
+    classis: "active",
+    anchor: "contact-us",
+    subnav: []
+  }];
 
   return {
     getnav: function() {
