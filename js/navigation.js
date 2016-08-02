@@ -3,7 +3,7 @@
 // } else {
 //   adminURL = "http://localhost/demo/index.php";
 // }
-var baseUrl = "http://wohlig.co.in/innergizebackend/";
+var baseUrl = "http://104.199.171.145/backend/";
 // var baseUrl = "http://192.168.0.118/innergizebackend/";
 // var baseUrl = "http://suksha.com/innergizebackend/";
 var adminURL = baseUrl + "index.php/json/";
