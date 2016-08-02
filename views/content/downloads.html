@@ -12,10 +12,15 @@
                     <uib-tab-heading>
                         <div class="pd20 bold active-made">{{data.name}}</div>
                     </uib-tab-heading>
-                    <div class="bg-grey pd20 pl60" >
-                        <ul class="list-unstyled list-inline ul-download dot-blue dot-grey" ng-if="CategoriesWithId.length>0">
-                            <li ng-repeat="catid in CategoriesWithId" ng-click="open(catid,'lg');">{{catid.name}}</li>
-                        </ul>
+                    <div class="bg-grey padded">
+                      <div class="container">
+                        <div class="loading-sec text-center" ng-if="CategoriesWithId.length==0">
+                          Loading...
+                        </div>
+                          <ul class="list-unstyled list-inline ul-download dot-blue dot-grey" ng-if="CategoriesWithId.length>0">
+                              <li ng-repeat="catid in CategoriesWithId" ng-click="open(catid,'lg');">{{catid.name}}</li>
+                          </ul>
+                      </div>
                     </div>
                 </uib-tab>
             </uib-tabset>
