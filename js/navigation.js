@@ -34,11 +34,16 @@ var navigationservice = angular.module('navigationservice', [])
     anchor: "clients",
     subnav: []
   }, {
+    name: "Knowledge Centre",
+    classis: "active",
+    anchor: "knowledge-centre",
+    subnav: []
+  }, {
     name: "Careers",
     classis: "active",
     anchor: "careers",
     subnav: []
-  }, {
+  },{
     name: "Contact Us",
     classis: "active",
     anchor: "contact-us",
