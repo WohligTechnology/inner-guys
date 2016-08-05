@@ -214,17 +214,17 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     };
 })
 
-.controller('DownloadsCtrl', function($scope, TemplateService, NavigationService, $timeout, $uibModal) {
+.controller('KnowledgeCentreCtrl', function($scope, TemplateService, NavigationService, $timeout, $uibModal) {
     //Used to name the .html file
-    $scope.template = TemplateService.changecontent("downloads");
-    $scope.menutitle = NavigationService.makeactive("Downloads");
+    $scope.template = TemplateService.changecontent("knowledge-centre");
+    $scope.menutitle = NavigationService.makeactive("Knowledge Centre");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
     $scope.open = function(pdf, size) {
         $scope.modalPdf = pdf.pdf;
         $uibModal.open({
             templateUrl: 'views/content/modal-download.html',
-            controller: 'DownloadsCtrl',
+            controller: 'KnowledgeCentreCtrl',
             size: size,
             scope: $scope
         });

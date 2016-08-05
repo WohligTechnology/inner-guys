@@ -47,11 +47,10 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
     controller: 'ClientsCtrl'
   })
 
-
-  .state('downloads', {
-    url: "/downloads",
+  .state('knowledge-centre', {
+    url: "/knowledge-centre",
     templateUrl: "views/template.html",
-    controller: 'DownloadsCtrl'
+    controller: 'KnowledgeCentreCtrl'
   })
 
   .state('contact-us', {
