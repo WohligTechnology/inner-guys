@@ -1,5 +1,4 @@
 angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'ngAnimate', 'ngSanitize', 'angular-flexslider', 'imageupload'])
-
 .controller('HomeCtrl', function($scope, TemplateService, NavigationService, $timeout) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("home");
@@ -220,15 +219,17 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.menutitle = NavigationService.makeactive("Knowledge Centre");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
-    $scope.open = function(pdf, size) {
-        $scope.modalPdf = pdf.pdf;
-        $uibModal.open({
-            templateUrl: 'views/content/modal-download.html',
-            controller: 'KnowledgeCentreCtrl',
-            size: size,
-            scope: $scope
-        });
-    };
+    console.log(imgurl);
+    $scope.imgurl = imgurl;
+    // $scope.open = function(pdf, size) {
+    //     $scope.modalPdf = pdf.pdf;
+    //     $uibModal.open({
+    //         templateUrl: 'views/content/modal-download.html',
+    //         controller: 'KnowledgeCentreCtrl',
+    //         size: size,
+    //         scope: $scope
+    //     });
+    // };
 
     // $scope.close = function() {
     //   $uibModalInstance.dismiss('cancel');
@@ -253,6 +254,14 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 })
 
+.controller('DownloadCtrl', function($scope, TemplateService, NavigationService, $timeout, $uibModal) {
+    //Used to name the .html file
+    $scope.template = TemplateService.changecontent("download");
+    $scope.menutitle = NavigationService.makeactive("Download");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getnav();
+    
+})
 .controller('ContactCtrl', function($scope, TemplateService, NavigationService, $timeout) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("contact-us");

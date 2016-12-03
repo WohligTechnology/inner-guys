@@ -18,7 +18,7 @@
                           Loading...
                         </div>
                           <ul class="list-unstyled list-inline ul-download dot-blue dot-grey" ng-if="CategoriesWithId.length>0">
-                              <li ng-repeat="catid in CategoriesWithId" ng-click="open(catid,'lg');">{{catid.name}}</li>
+                              <li ng-repeat="catid in CategoriesWithId"><a href="{{imgurl}}{{catid.pdf}}" target="_blank">{{catid.name}}</a></li>
                           </ul>
                       </div>
                     </div>

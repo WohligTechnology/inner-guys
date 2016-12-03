@@ -52,6 +52,11 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
     templateUrl: "views/template.html",
     controller: 'KnowledgeCentreCtrl'
   })
+  .state('download', {
+    url: "/knowledge-centre/:id",
+    templateUrl: "views/template.html",
+    controller: 'DownloadCtrl'
+  })
 
   .state('contact-us', {
     url: "/contact-us",
