@@ -1078,24 +1078,6 @@ textarea {
     }
   }
 }
-
-.modal-download {
-  button.close {
-    background: #000!important;
-    color: #fff;
-    text-shadow: none;
-    border-radius: 50%;
-    position: absolute;
-    right: -10px;
-    top: -10px;
-    opacity: 1;
-    padding: 1px 5px;
-  }
-
-  .close {
-    font-size: 20px;
-  }
-}
 .padded {
   padding: 30px 0;
 }
@@ -1123,6 +1105,13 @@ textarea {
 }
 .social {
   font-size: 18px;
+}
+.modal-download {
+     height: calc(100vh - 130px);
+    .pdf-made{
+  height: calc(100vh - 145px);
+       margin: 7px 0;
+    }
 }
 /* Start writing sass here */
 @import "fancybox-override";

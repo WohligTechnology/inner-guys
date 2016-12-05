@@ -251,15 +251,15 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         });
     };
     $scope.OnclickId(id);
-
 })
 
-.controller('DownloadCtrl', function($scope, TemplateService, NavigationService, $timeout, $uibModal) {
+.controller('DownloadCtrl', function($scope, TemplateService, NavigationService, $timeout, $uibModal,$stateParams) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("download");
     $scope.menutitle = NavigationService.makeactive("Download");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
+     $scope.modalPdf = $stateParams.id;
     
 })
 .controller('ContactCtrl', function($scope, TemplateService, NavigationService, $timeout) {
