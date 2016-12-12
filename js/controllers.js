@@ -1,31 +1,31 @@
 angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'ngAnimate', 'ngSanitize', 'angular-flexslider', 'imageupload'])
-.controller('HomeCtrl', function($scope, TemplateService, NavigationService, $timeout) {
-    //Used to name the .html file
-    $scope.template = TemplateService.changecontent("home");
-    $scope.menutitle = NavigationService.makeactive("Home");
-    TemplateService.title = $scope.menutitle;
-    $scope.navigation = NavigationService.getnav();
+    .controller('HomeCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
+        //Used to name the .html file
+        $scope.template = TemplateService.changecontent("home");
+        $scope.menutitle = NavigationService.makeactive("Home");
+        TemplateService.title = $scope.menutitle;
+        $scope.navigation = NavigationService.getnav();
 
-    $scope.mySlides = [{
-        image: 'img/slides/slide1.jpg',
-        title: 'Bridging the gap. Positively.',
-        text: 'Innergize Solutions Private Limited is a strategy and management consultancy firm that provides a broad spectrum of services across diverse clientele that ranges from private corporations to financial institutions and even  high net worth individuals.',
-        pagelink: 'about-us',
-        pagename: 'About Us'
-    }, {
-        image: 'img/about/about.jpg',
-        // title: 'Services',
-        text: 'Innergize offers a comprehensive range of strategic, advisory and execution services that are customized to the grass root reality of the customer’s business environment to harness sustainable, competence and process driven results. Our functional area experts and affiliates ensure that your business is operating at optimal levels.',
-        pagelink: 'services',
-        pagename: 'services'
-    }];
+        $scope.mySlides = [{
+            image: 'img/slides/slide1.jpg',
+            title: 'Bridging the gap. Positively.',
+            text: 'Innergize Solutions Private Limited is a strategy and management consultancy firm that provides a broad spectrum of services across diverse clientele that ranges from private corporations to financial institutions and even  high net worth individuals.',
+            pagelink: 'about-us',
+            pagename: 'About Us'
+        }, {
+            image: 'img/about/about.jpg',
+            // title: 'Services',
+            text: 'Innergize offers a comprehensive range of strategic, advisory and execution services that are customized to the grass root reality of the customer’s business environment to harness sustainable, competence and process driven results. Our functional area experts and affiliates ensure that your business is operating at optimal levels.',
+            pagelink: 'services',
+            pagename: 'services'
+        }];
 
-    angular.element(document).ready(function() {
-        $scope.autoHeight = $(window).height() - 120;
-    });
-})
+        angular.element(document).ready(function () {
+            $scope.autoHeight = $(window).height() - 120;
+        });
+    })
 
-.controller('AboutCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+.controller('AboutCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("about-us");
     $scope.menutitle = NavigationService.makeactive("About Us");
@@ -33,7 +33,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.navigation = NavigationService.getnav();
 })
 
-.controller('ServicesCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+.controller('ServicesCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("services");
     $scope.menutitle = NavigationService.makeactive("Services");
@@ -58,7 +58,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     }];
 })
 
-.controller('AffiliatesCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+.controller('AffiliatesCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("affiliates");
     $scope.menutitle = NavigationService.makeactive("Affiliates");
@@ -66,7 +66,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.navigation = NavigationService.getnav();
 })
 
-.controller('DisclaimerCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+.controller('DisclaimerCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("disclaimer");
     $scope.menutitle = NavigationService.makeactive("Disclaimer");
@@ -74,7 +74,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.navigation = NavigationService.getnav();
 })
 
-.controller('ClientsCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+.controller('ClientsCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("clients");
     $scope.menutitle = NavigationService.makeactive("Clients");
@@ -200,11 +200,11 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     }];
 
     $scope.client = _.chunk($scope.client, 8);
-    _.each($scope.client, function(key) {
+    _.each($scope.client, function (key) {
         $scope.clients.push(_.chunk(key, 4));
     });
 
-    var navigationUrl = function(event) {
+    var navigationUrl = function (event) {
         if (event.ctrlKey) {
             window.open(client, '_blank'); // in new tab
         } else {
@@ -213,7 +213,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     };
 })
 
-.controller('KnowledgeCentreCtrl', function($scope, TemplateService, NavigationService, $timeout, $uibModal) {
+.controller('KnowledgeCentreCtrl', function ($scope, TemplateService, NavigationService, $timeout, $uibModal) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("knowledge-centre");
     $scope.menutitle = NavigationService.makeactive("Knowledge Centre");
@@ -235,7 +235,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     //   $uibModalInstance.dismiss('cancel');
     // };
 
-    NavigationService.getCategoryData(function(data) {
+    NavigationService.getCategoryData(function (data) {
 
         $scope.Categories = data;
 
@@ -243,9 +243,9 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
     });
     var id = '1';
-    $scope.OnclickId = function(id) {
+    $scope.OnclickId = function (id) {
         $scope.CategoriesWithId = [];
-        NavigationService.getCategoryId(id, function(data) {
+        NavigationService.getCategoryId(id, function (data) {
             $scope.CategoriesWithId = data;
             console.log('CategoriesWithId', $scope.CategoriesWithId);
         });
@@ -253,63 +253,68 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.OnclickId(id);
 })
 
-.controller('DownloadCtrl', function($scope, TemplateService, NavigationService, $timeout, $uibModal,$stateParams) {
-    //Used to name the .html file
-    $scope.template = TemplateService.changecontent("download");
-    $scope.menutitle = NavigationService.makeactive("Download");
-    TemplateService.title = $scope.menutitle;
-    $scope.navigation = NavigationService.getnav();
-     $scope.modalPdf = $stateParams.id;
-    
-})
-.controller('ContactCtrl', function($scope, TemplateService, NavigationService, $timeout) {
-    //Used to name the .html file
-    $scope.template = TemplateService.changecontent("contact-us");
-    $scope.menutitle = NavigationService.makeactive("Contact Us");
-    TemplateService.title = $scope.menutitle;
-    $scope.navigation = NavigationService.getnav();
-    $scope.formData = {};
-    $scope.formData.enquiryarr = [];
+.controller('DownloadCtrl', function ($scope, TemplateService, NavigationService, $timeout, $uibModal, $stateParams, $filter, $sce) {
+        //Used to name the .html file
+        $scope.template = TemplateService.changecontent("download");
+        $scope.menutitle = NavigationService.makeactive("Download");
+        TemplateService.title = $scope.menutitle;
+        $scope.navigation = NavigationService.getnav();
+        $scope.data = $stateParams;
+        console.log($stateParams);
+        $scope.pdfURL = $filter('uploadpath')($scope.data.pdf);
+        $scope.finalURL = 'http://docs.google.com/gview?url=' + $scope.pdfURL + '&embedded=true';
+        $scope.trustedURL = $sce.trustAsResourceUrl($scope.finalURL);
 
-    $scope.submitContactForm = function(formValid) {
-        $scope.formData.enquiry = "";
-        if (formValid.$valid && $scope.formData) {
-            if ($scope.formData.enquiryarr.length > 0) {
-                _.each($scope.formData.enquiryarr, function(n) {
-                    $scope.formData.enquiry += n + ",";
-                })
-                $scope.formData.enquiry = $scope.formData.enquiry.substring(0, $scope.formData.enquiry.length - 1);
-            }
-            $scope.formData.services = $scope.formData.enquiryarr.toString();
-            NavigationService.submitContact($scope.formData, function(data) {
-                console.log(data);
-                if (data.value != false) {
-                    $scope.thankyouact = true;
+
+    })
+    .controller('ContactCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
+        //Used to name the .html file
+        $scope.template = TemplateService.changecontent("contact-us");
+        $scope.menutitle = NavigationService.makeactive("Contact Us");
+        TemplateService.title = $scope.menutitle;
+        $scope.navigation = NavigationService.getnav();
+        $scope.formData = {};
+        $scope.formData.enquiryarr = [];
+
+        $scope.submitContactForm = function (formValid) {
+            $scope.formData.enquiry = "";
+            if (formValid.$valid && $scope.formData) {
+                if ($scope.formData.enquiryarr.length > 0) {
+                    _.each($scope.formData.enquiryarr, function (n) {
+                        $scope.formData.enquiry += n + ",";
+                    })
+                    $scope.formData.enquiry = $scope.formData.enquiry.substring(0, $scope.formData.enquiry.length - 1);
                 }
-            });
-        }
-    };
+                $scope.formData.services = $scope.formData.enquiryarr.toString();
+                NavigationService.submitContact($scope.formData, function (data) {
+                    console.log(data);
+                    if (data.value != false) {
+                        $scope.thankyouact = true;
+                    }
+                });
+            }
+        };
 
-    $scope.pushorpop = function(val) {
-        var foundIndex = $scope.formData.enquiryarr.indexOf(val);
-        if (foundIndex == -1) {
-            $scope.formData.enquiryarr.push(val);
-        } else {
-            $scope.formData.enquiryarr.splice(foundIndex, 1);
+        $scope.pushorpop = function (val) {
+            var foundIndex = $scope.formData.enquiryarr.indexOf(val);
+            if (foundIndex == -1) {
+                $scope.formData.enquiryarr.push(val);
+            } else {
+                $scope.formData.enquiryarr.splice(foundIndex, 1);
+            }
         }
-    }
-})
+    })
 
-.controller('CareersCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+.controller('CareersCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("careers");
     $scope.menutitle = NavigationService.makeactive("Careers");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
     $scope.formData = {};
-    $scope.submitCareersForm = function(formValid) {
+    $scope.submitCareersForm = function (formValid) {
         if (formValid.$valid && $scope.formData) {
-            NavigationService.submitCareers($scope.formData, function(data) {
+            NavigationService.submitCareers($scope.formData, function (data) {
                 console.log(data);
                 if (data.value != false) {
                     $scope.thankyouact = true;
@@ -318,20 +323,20 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         }
     };
 
-    $scope.changeit = function(data) {
+    $scope.changeit = function (data) {
         console.log(data);
         $scope.formData.resume = data.data[0];
     }
 })
 
-.controller('headerctrl', function($scope, TemplateService) {
+.controller('headerctrl', function ($scope, TemplateService) {
     $scope.template = TemplateService;
-    $scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
+    $scope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
         $(window).scrollTop(0);
     });
     $scope.showBar = "";
     $scope.showMenu = "menu-in";
-    $scope.getMenu = function() {
+    $scope.getMenu = function () {
         if ($scope.showMenu == "menu-out") {
             $scope.showMenu = "menu-in";
             $scope.showBar = "";
@@ -342,9 +347,9 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     };
 })
 
-.controller('languageCtrl', function($scope, TemplateService, $translate, $rootScope) {
+.controller('languageCtrl', function ($scope, TemplateService, $translate, $rootScope) {
 
-    $scope.changeLanguage = function() {
+    $scope.changeLanguage = function () {
         console.log("Language CLicked");
 
         if (!$.jStorage.get("language")) {

@@ -7,7 +7,7 @@ var firstapp = angular.module('firstapp', [
   'pascalprecht.translate'
 ]);
 
-firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $locationProvider) {
+firstapp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $locationProvider) {
   // for http request with session
   $httpProvider.defaults.withCredentials = true;
   $stateProvider
@@ -48,15 +48,15 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
   })
 
   .state('knowledge-centre', {
-    url: "/knowledge-centre",
-    templateUrl: "views/template.html",
-    controller: 'KnowledgeCentreCtrl'
-  })
-  .state('download', {
-    url: "/knowledge-centre/:id",
-    templateUrl: "views/template.html",
-    controller: 'DownloadCtrl'
-  })
+      url: "/knowledge-centre",
+      templateUrl: "views/template.html",
+      controller: 'KnowledgeCentreCtrl'
+    })
+    .state('download', {
+      url: "/knowledge-centre/:name/:pdf",
+      templateUrl: "views/template.html",
+      controller: 'DownloadCtrl'
+    })
 
   .state('contact-us', {
     url: "/contact-us",
@@ -76,16 +76,16 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
 });
 
 
-firstapp.directive('img', function($compile, $parse) {
+firstapp.directive('img', function ($compile, $parse) {
   return {
     restrict: 'E',
     replace: false,
-    link: function($scope, element, attrs) {
+    link: function ($scope, element, attrs) {
       var $element = $(element);
       if (!attrs.noloading) {
         $element.after("<img src='img/loading.gif' class='loading' />");
         var $loading = $element.next(".loading");
-        $element.load(function() {
+        $element.load(function () {
           $loading.remove();
           $(this).addClass("doneLoading");
         });
@@ -96,11 +96,11 @@ firstapp.directive('img', function($compile, $parse) {
   };
 });
 
-firstapp.directive('fancyboxBox', function($document) {
+firstapp.directive('fancyboxBox', function ($document) {
   return {
     restrict: 'EA',
     replace: false,
-    link: function(scope, element, attr) {
+    link: function (scope, element, attr) {
       var $element = $(element);
       var target;
       if (attr.rel) {
@@ -121,8 +121,8 @@ firstapp.directive('fancyboxBox', function($document) {
   };
 });
 
-firstapp.filter('uploadpath', function() {
-  return function(input, width, height, style) {
+firstapp.filter('uploadpath', function () {
+  return function (input, width, height, style) {
     var other = "";
     if (width && width !== "") {
       other += "&width=" + width;
@@ -140,14 +140,14 @@ firstapp.filter('uploadpath', function() {
 });
 
 
-firstapp.directive('uploadImage', function($http) {
+firstapp.directive('uploadImage', function ($http) {
   return {
     templateUrl: 'views/directive/uploadFile.html',
     scope: {
       model: '=ngModel',
       callback: "=ngCallback"
     },
-    link: function($scope, element, attrs) {
+    link: function ($scope, element, attrs) {
       $scope.isMultiple = false;
       $scope.inObject = false;
       if (attrs.multiple || attrs.multiple === "") {
@@ -160,10 +160,10 @@ firstapp.directive('uploadImage', function($http) {
       if (attrs.inobj || attrs.inobj === "") {
         $scope.inObject = true;
       }
-      $scope.clearOld = function() {
+      $scope.clearOld = function () {
         $scope.model = [];
       };
-      $scope.upload = function(image) {
+      $scope.upload = function (image) {
         console.log(image);
         console.log("File");
         var Template = this;
@@ -175,7 +175,7 @@ firstapp.directive('uploadImage', function($http) {
             'Content-Type': undefined
           },
           transformRequest: angular.identity
-        }).success(function(data) {
+        }).success(function (data) {
           if ($scope.callback) {
             $scope.callback(data);
           } else {
@@ -197,16 +197,16 @@ firstapp.directive('uploadImage', function($http) {
   };
 });
 
-firstapp.directive('imageonload', function() {
+firstapp.directive('imageonload', function () {
   return {
     restrict: 'A',
-    link: function(scope, element, attrs) {
+    link: function (scope, element, attrs) {
       console.log("Loading should start now", attrs.imageonload);
       scope.attr = attrs;
       scope.$watch(
         "attr.change",
         function handleFooChange(newValue, oldValue) {
-          setTimeout(function() {
+          setTimeout(function () {
             scope.$apply(attrs.imageonload);
           }, 500);
 
@@ -218,20 +218,20 @@ firstapp.directive('imageonload', function() {
   };
 });
 
-firstapp.config(function($translateProvider) {
+firstapp.config(function ($translateProvider) {
   $translateProvider.translations('en', LanguageEnglish);
   $translateProvider.translations('hi', LanguageHindi);
   $translateProvider.preferredLanguage('en');
 });
-firstapp.directive('autoHeight', function($compile, $parse) {
+firstapp.directive('autoHeight', function ($compile, $parse) {
   return {
     restrict: 'EA',
     replace: false,
-    link: function($scope, element, attrs) {
+    link: function ($scope, element, attrs) {
       var $element = $(element);
       var windowHeight = $(window).height();
       var newheight = windowHeight - 300;
-      var addHeight = function() {
+      var addHeight = function () {
         $element.css("min-height", newheight);
       };
       addHeight();
@@ -239,14 +239,14 @@ firstapp.directive('autoHeight', function($compile, $parse) {
   };
 });
 
-firstapp.directive('scrolldown', function($compile, $parse) {
+firstapp.directive('scrolldown', function ($compile, $parse) {
   return {
     restrict: 'EA',
     replace: false,
-    link: function($scope, element, attrs) {
+    link: function ($scope, element, attrs) {
       var $element = $(element);
       // var windowHeight = $(window).height();
-      $scope.scrollDown = function() {
+      $scope.scrollDown = function () {
         $('html,body').animate({
             scrollTop: $(".second").offset().top
           },
@@ -256,8 +256,8 @@ firstapp.directive('scrolldown', function($compile, $parse) {
   };
 });
 
-firstapp.filter('uploadpath', function($sce) {
-  return function(input, width, height, style) {
+firstapp.filter('uploadpath', function ($sce) {
+  return function (input, width, height, style) {
     if (input && input.indexOf(".pdf") != -1) {
       return $sce.trustAsResourceUrl(imgurl + input);
     }
@@ -279,14 +279,14 @@ firstapp.filter('uploadpath', function($sce) {
   };
 });
 
-firstapp.directive('scrolldown1', function($compile, $parse) {
+firstapp.directive('scrolldown1', function ($compile, $parse) {
   return {
     restrict: 'EA',
     replace: false,
-    link: function($scope, element, attrs) {
+    link: function ($scope, element, attrs) {
       var $element = $(element);
       // var windowHeight = $(window).height();
-      $scope.scrollDown1 = function() {
+      $scope.scrollDown1 = function () {
         $('html,body').animate({
             scrollTop: $(".second1").offset().top
           },

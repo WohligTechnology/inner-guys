@@ -13,14 +13,14 @@
                         <div class="pd20 bold active-made">{{data.name}}</div>
                     </uib-tab-heading>
                     <div class="bg-grey padded">
-                      <div class="container">
-                        <div class="loading-sec text-center" ng-if="CategoriesWithId.length==0">
-                          Loading...
+                        <div class="container">
+                            <div class="loading-sec text-center" ng-if="CategoriesWithId.length==0">
+                                Loading...
+                            </div>
+                            <ul class="list-unstyled list-inline ul-download dot-blue dot-grey" ng-if="CategoriesWithId.length>0">
+                                <li ng-repeat="catid in CategoriesWithId"><a ui-sref="download(catid)">{{catid.name}}</a></li>
+                            </ul>
                         </div>
-                          <ul class="list-unstyled list-inline ul-download dot-blue dot-grey" ng-if="CategoriesWithId.length>0">
-                              <li ng-repeat="catid in CategoriesWithId"><a ui-sref="download({id:catid.pdf})" target="_blank">{{catid.name}}</a></li>
-                          </ul>
-                      </div>
                     </div>
                 </uib-tab>
             </uib-tabset>

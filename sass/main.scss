@@ -5,7 +5,9 @@
 @import "../bower_components/flexslider/flexslider.css";
 @import "../bower_components/font-awesome/css/font-awesome.min.css";
 @import "../bower_components/fancyBox/source/jquery.fancybox.css";
+
 /* Bootstrap Variables Goes Here */
+
 $brand-primary: #0095D7 !default;
 $brand-success: #84ce3c !default;
 $brand-warning: #ffec39 !default;
@@ -28,6 +30,7 @@ $top-height: 81px;
 p {
   color: #313131;
 }
+
 @font-face {
   font-family: "Didot";
   src: url("../fonts/didot.ttf");
@@ -63,9 +66,11 @@ img.loading {
   width: 32px !important;
   height: auto;
 }
+
 .color-primary {
   color: $brand-primary !important;
 }
+
 img {
   opacity: 0;
   @include transition(all 300ms ease);
@@ -84,12 +89,15 @@ a {
   cursor: pointer;
   @include transition(all ease 300ms);
 }
+
 .btn-clear {
-  @include button-variant(white, transparent, transparent);
+  @include button-variant(white,
+  transparent,
+  transparent);
 }
+
 a {
   color: #5f5f5f;
-
   &:focus,
   &:hover {
     color: darken(#5f5f5f, 30%);
@@ -97,13 +105,13 @@ a {
     outline: none;
   }
 }
-//bootstrap forms
 
+//bootstrap forms
 .btn,
 .form-control,
-.input-group-lg > .form-control,
-.input-group-lg > .input-group-addon,
-.input-group-lg > .input-group-btn > .btn,
+.input-group-lg>.form-control,
+.input-group-lg>.input-group-addon,
+.input-group-lg>.input-group-btn>.btn,
 .input-lg {
   border-radius: 0;
   @include box-shadow(none);
@@ -194,7 +202,6 @@ a {
 .head-font {
   text-align: center;
   width: 100%;
-
   h1 {
     margin-top: 0;
     font-size: 60px;
@@ -211,26 +218,25 @@ p {
 }
 
 .overview-box {
-  @include position(absolute, 50% null null 50%);
+  @include position(absolute,
+  50% null null 50%);
   @include transform (translatex(-50%) translatey(-50%));
   width: 85%;
   height: 90%;
   overflow: auto;
   padding: 0 10px;
-
   p {
     text-align: justify;
   }
-
   &.height-auto {
     height: auto!important;
   }
 }
 
 .up-side {
-  @include position(absolute, 50% null null 50%);
+  @include position(absolute,
+  50% null null 50%);
   @include transform (translatex(-50%) translatey(-50%));
-
   h1 {
     font-size: 60px;
     color: #ebebeb;
@@ -242,13 +248,12 @@ p {
 .head-font {
   @extend .up-side;
   text-transform: uppercase;
-
   h1 {
     padding-top: 0;
   }
 }
-//bootstrap forms
 
+//bootstrap forms
 .flexslider {
   margin: 0;
   border: 0 solid #ffffff;
@@ -277,9 +282,8 @@ p {
   top: $top-height;
   right: 0;
   z-index: 3;
-  background-color: rgba(123,129,133,0.95);
+  background-color: rgba(123, 129, 133, 0.95);
   overflow-y: auto;
-
   .navigation {
     li {
       &.active,
@@ -290,7 +294,6 @@ p {
         }
       }
     }
-
     a {
       padding: 15px 20px;
       display: block;
@@ -319,26 +322,23 @@ p {
 }
 
 .content-holder {
-  @include position(absolute, null 0 45px 0);
-
+  @include position(absolute,
+  null 0 45px 0);
   h3 {
     color: #fff;
     font-size: 32px;
     font-family: "Didot";
     letter-spacing: 2px;
   }
-
   p {
     width: 48%;
     color: #fff;
     text-align: justify;
   }
-
   .btn-clear {
     color: #fff;
     display: inline-block;
     padding: 0 5px 0 0;
-
     &:hover {
       color: $brand-primary;
     }
@@ -347,13 +347,11 @@ p {
 
 .hamburger {
   margin: 10px 0 0;
-
   .navbar-toggle {
     padding: 9px 9px 9px 10px;
     display: inline-block;
     background-color: transparent!important;
     margin: 0;
-
     .icon-bar {
       @include transition(all 300ms ease);
       height: 3px;
@@ -375,35 +373,38 @@ p {
 .cross-bar {
   span:first-child {
     @include transform(rotate(45deg));
-    @include position(relative, 7px null null null);
+    @include position(relative,
+    7px null null null);
   }
-
   span:nth-child(2) {
     opacity: 0;
   }
-
   span:last-child {
     @include transform(rotate(-45deg));
-    @include position(relative, -7px null null null);
+    @include position(relative,
+    -7px null null null);
   }
 }
 
 .flex-control-nav {
   width: 100%;
-  @include position(absolute,null null 20px null);
+  @include position(absolute,
+  null null 20px null);
   text-align: center;
   z-index: 3;
 }
 
 .logo {
   display: inline-block;
-
   img {
     width: auto;
     height: 60px;
   }
 }
+
+
 /*footer*/
+
 .footers {
   padding: 10px 0 0;
   background-color: #35393c;
@@ -468,7 +469,6 @@ p {
       left: 0;
     }
   }
-
   &.dot-grey {
     li:before {
       color: #777;
@@ -507,31 +507,25 @@ p {
       color: #fff;
     }
   }
-
   .submit-btn .submit {
     color: #fff;
-
     &:hover {
       color: darken(#fff, 15%);
     }
   }
-
   .upload-img {
     .btn-upload input {
       left: 50%;
       @include transform(translateX(-50%));
     }
   }
-
   .btn-upload {
     position: relative;
     overflow: hidden;
     background: #fff;
-
     &:hover {
       background: darken(#fff, 10%);
     }
-
     input {
       position: absolute;
       top: 0;
@@ -541,13 +535,11 @@ p {
       font-size: 20px;
       cursor: pointer;
       opacity: 0;
-      filter:alpha(opacity=0);
+      filter: alpha(opacity=0);
     }
   }
-
   .img-upload {
     margin-bottom: 20px;
-
     .slider-box {
       padding-bottom: 10px;
     }
@@ -569,13 +561,11 @@ textarea {
 
 .submit-btn {
   text-align: right;
-
   .submit {
     font-size: 16px;
     font-weight: 600;
     color: #5f5f5f;
     text-transform: capitalize !important;
-
     &:hover {
       color: #5f5f5f;
       text-decoration: none;
@@ -591,11 +581,9 @@ textarea {
 
 .contact {
   margin-bottom: 10px;
-
   h4 {
     margin: 15px 0 5px;
   }
-
   p {
     line-height: 150%;
     margin-bottom: 0;
@@ -610,7 +598,6 @@ textarea {
   padding: 50px;
   background: #fff;
   margin-bottom: 20px;
-
   p {
     margin: 0;
   }
@@ -622,65 +609,53 @@ textarea {
 
 .services-list {
   padding: 0 20px;
-
   .panel-group {
     .panel {
       border-radius: 0;
     }
-
     .panel-body {
       padding-left: 0;
       background-color: #ebebeb;
       padding: 5px 10px;
     }
-
     .panel-default {
       border: 0;
       border-bottom: 2px solid;
       border-color: #a3a3a3;
       box-shadow: none;
-
       .panel-heading {
         color: #333333;
         background-color: #ebebeb;
         border: 0;
         box-shadow: none;
         padding: 0;
-
         span {
           &:focus {
             outline: 0;
           }
         }
-
         h4 {
           font-size: 16px;
           margin: 0;
           padding: 0.4em 5px;
-
           i {
             color: #979797;
           }
         }
-
-        &+ .panel-collapse > .panel-body {
+        &+.panel-collapse>.panel-body {
           border-top: 0;
         }
       }
     }
   }
-
-  .panel-group .panel + .panel {
+  .panel-group .panel+.panel {
     margin-top: 0;
   }
-
   ul li {
     line-height: 200%;
   }
-
   .panel-body {
     color: #5f5f5f;
-
     a,
     li,
     p {
@@ -694,16 +669,13 @@ textarea {
     margin-bottom: 20px;
     font-size: 60px;
   }
-
   h2 {
     margin-bottom: 20px;
     font-size: 40px;
   }
-
   h5 {
     text-transform: uppercase;
   }
-
   .philosophy-cont {
     padding-top: 20px;
   }
@@ -717,14 +689,13 @@ textarea {
   position: relative;
 }
 
-.checkbox-inline + .checkbox-inline {
+.checkbox-inline+.checkbox-inline {
   margin-left: 0;
 }
 
 .checkbox-inline {
   color: #555555;
   padding-left: 15px;
-
   input[type=checkbox] {
     display: none;
   }
@@ -734,7 +705,6 @@ textarea {
   input[type=checkbox] {
     display: none;
   }
-
   input[type=checkbox]+label span {
     display: inline-block;
     width: 10px;
@@ -744,11 +714,9 @@ textarea {
     border: 1px solid $brand-primary;
     background-color: #ebebeb;
   }
-
   input[type=checkbox]:checked+label span {
     background-color: $brand-primary;
   }
-
   label {
     font-weight: 400;
     cursor: pointer;
@@ -758,14 +726,12 @@ textarea {
 .submit-over {
   height: 350px;
   position: relative;
-
   .middle-place {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     color: #000;
-
     h2 {
       font-size: 36px;
       font-weight: 700;
@@ -782,7 +748,7 @@ textarea {
   }
   /* Track */
   &::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
     -webkit-border-radius: 10px;
     border-radius: 10px;
   }
@@ -790,12 +756,11 @@ textarea {
   &::-webkit-scrollbar-thumb {
     -webkit-border-radius: 10px;
     border-radius: 10px;
-    background: rgba(255,255,255,0.8);
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+    background: rgba(255, 255, 255, 0.8);
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
   }
-
   &::-webkit-scrollbar-thumb:window-inactive {
-    background: rgba(255,255,255,0.4);
+    background: rgba(255, 255, 255, 0.4);
   }
 }
 
@@ -807,47 +772,38 @@ textarea {
   ol.flex-control-nav.flex-control-paging {
     display: none;
   }
-
   .flex-direction-nav {
     display: block;
   }
-
   .flexslider {
     background: transparent;
     border-color: transparent;
     margin-bottom: 15px;
-
     &:hover {
       .flex-direction-nav {
         .flex-prev {
           left: -0px;
         }
-
         .flex-next {
           right: -0px;
         }
       }
     }
   }
-
   .flex-direction-nav {
     .flex-prev {
       left: -0px;
     }
-
     .flex-next {
       right: -0px;
     }
-
     a {
       opacity: 1;
       width: 50px;
       height: 80px;
-
       &.flex-prev:before {
         content: url('../img/clients/back.png');
       }
-
       &.flex-next:before {
         content: url('../img/clients/next.png');
       }
@@ -859,13 +815,11 @@ textarea {
   position: relative;
   margin-bottom: 10px;
   cursor: pointer;
-
   &:hover {
     .hover-content {
       opacity: 1;
     }
   }
-
   .hover-content {
     position: absolute;
     z-index: 2;
@@ -878,7 +832,6 @@ textarea {
     opacity: 0;
     @include transition(all ease 300ms);
   }
-
   .hover-content p {
     font-size: 14px;
     font-weight: 400;
@@ -886,7 +839,8 @@ textarea {
     position: absolute;
     top: 50%;
     left: 50%;
-    @include transform(translate(-50%,-50%));
+    @include transform(translate(-50%,
+    -50%));
     line-height: 100%;
   }
 }
@@ -896,7 +850,6 @@ textarea {
   height: 150px;
   overflow: hidden;
   margin-bottom: 10px;
-
   img {
     width: 100%;
   }
@@ -904,7 +857,6 @@ textarea {
 
 .block {
   display: block;
-
   .inlineblock {
     display: inline-block;
   }
@@ -923,14 +875,13 @@ textarea {
   position: absolute;
   top: 58%;
   left: 50%;
-  @include transform(translate(-50%,-58%));
+  @include transform(translate(-50%,
+  -58%));
   z-index: 9;
-
   i {
     font-size: 35px;
     cursor: pointer;
   }
-
   .circle {
     display: inline-block;
     cursor: pointer;
@@ -953,7 +904,10 @@ textarea {
   //     display: block;
   //   }
 }
+
+
 /*footer ends*/
+
 .wallpaper {
   a {
     display: block;
@@ -963,16 +917,15 @@ textarea {
 .bounce {
   @include animation(bounce 2s infinite);
   cursor: pointer;
-
   .circle {
     display: block;
     @include transition(all ease 500ms);
-
     &:hover {
       opacity: 0.6;
     }
   }
 }
+
 @include keyframes(bounce) {
   0%,
   100%,
@@ -981,11 +934,9 @@ textarea {
   80% {
     @include transform(translateY(0));
   }
-
   40% {
     @include transform(translateY(-15px));
   }
-
   60% {
     @include transform(translateY(-7px));
   }
@@ -1027,34 +978,28 @@ textarea {
   .tab-pane .bg-grey {
     min-height: 250px;
   }
-
   .nav-tabs {
     padding: 0 50px;
   }
-
   .pl60 {
     padding-left: 80px;
   }
-
   ul {
     li {
       &.active {
         border-right: 1px solid #ddd;
         border-left: 1px solid #ddd;
-
         .nav-link {
           border-top: 3px solid #47b8f0!important;
           @extend .bg-grey;
         }
       }
-
       .nav-link {
         padding: 0;
         border-radius: 0;
         margin: 0;
         border: 0px!important;
         border-top: 3px solid transparent!important;
-
         &:hover {
           border-top: 3px solid #47b8f0!important;
           border-right: 1px solid #ddd;
@@ -1063,7 +1008,6 @@ textarea {
       }
     }
   }
-
   .ul-download {
     li {
       margin-bottom: 10px;
@@ -1071,27 +1015,31 @@ textarea {
       @include transition(all ease 300ms);
       width: 33%;
       color: #5f5f5f;
-
       &:hover {
         color: darken(#777, 60%);
       }
     }
   }
 }
+
 .padded {
   padding: 30px 0;
 }
+
 .text-uppercase {
   text-transform: uppercase;
 }
+
 .fb {
   a:hover {
     background-color: $facebook;
   }
 }
+
 .innergize-color:hover {
   background-color: #646a6c;
 }
+
 .tw {
   a:hover {
     background-color: $twitter;
@@ -1103,16 +1051,25 @@ textarea {
     background-color: $linkedin;
   }
 }
+
 .social {
   font-size: 18px;
 }
+
 .modal-download {
-     height: calc(100vh - 130px);
-    .pdf-made{
-  height: calc(100vh - 145px);
-       margin: 7px 0;
-    }
+  height: calc(100vh - 130px);
+  .pdf-made {
+    height: calc(100vh - 145px);
+    margin: 7px 0;
+  }
 }
+
+.small-font h1 {
+  font-size: 32px;
+}
+
+
 /* Start writing sass here */
+
 @import "fancybox-override";
 @import "mobile";
