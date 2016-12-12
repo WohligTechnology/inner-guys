@@ -256,10 +256,10 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 .controller('DownloadCtrl', function ($scope, TemplateService, NavigationService, $timeout, $uibModal, $stateParams, $filter, $sce) {
         //Used to name the .html file
         $scope.template = TemplateService.changecontent("download");
-        TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
         $scope.data = $stateParams;
         $scope.menutitle = NavigationService.makeactive($scope.data.name);
+        TemplateService.title = $scope.menutitle;
         $scope.pdfURL = $filter('uploadpath')($scope.data.pdf);
         $scope.finalURL = 'http://docs.google.com/gview?url=' + $scope.pdfURL + '&embedded=true';
         $scope.trustedURL = $sce.trustAsResourceUrl($scope.finalURL);
